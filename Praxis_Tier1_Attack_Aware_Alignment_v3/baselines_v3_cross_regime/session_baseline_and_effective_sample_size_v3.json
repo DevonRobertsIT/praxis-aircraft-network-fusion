@@ -1,0 +1,33 @@
+{
+  "baselines": {
+    "session_indicator": {
+      "auprc": 0.5552516411378556,
+      "roc_auc": NaN,
+      "sessions_in_test": "S1"
+    },
+    "any_flow": {
+      "auprc": 0.5552516411378556,
+      "flow_covered_events": 1828
+    },
+    "prevalence": {
+      "auprc": 0.5552516411378556
+    }
+  },
+  "strongest_baseline": "session_indicator",
+  "margin_rule": {
+    "minimum_margin": 0.02,
+    "interval": "bin-cluster bootstrap 95% must exclude 0"
+  },
+  "independent_units": {
+    "test_events": 1828,
+    "positives": 1015,
+    "negatives": 813,
+    "independent_240s_bins_total": 49,
+    "independent_240s_bins_positive": 28,
+    "independent_240s_bins_negative": 21,
+    "replay_cycles": 367
+  },
+  "bootstrap_repeats": 1000,
+  "bin_width_s": 240.0,
+  "seed": 42
+}

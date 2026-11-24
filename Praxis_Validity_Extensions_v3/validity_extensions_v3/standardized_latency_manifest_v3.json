@@ -1,0 +1,55 @@
+{
+  "analysis_version": "standardized_model_latency_v3",
+  "created_utc": "2026-09-03T22:07:01.787531+00:00",
+  "hardware_and_runtime": {
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "processor": "x86_64",
+    "logical_cpu_count": 9,
+    "python": "3.12.13",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0",
+    "torch": "2.13.0+cpu",
+    "device": "cpu",
+    "torch_threads": 1,
+    "threadpool_limit": 1
+  },
+  "sample": {
+    "held_out_events": 200,
+    "negative_events": 100,
+    "positive_events": 100,
+    "sampling": "fixed-seed class-balanced sample from the common chronological test set",
+    "repeats_per_event": 3,
+    "warmup_events": 20,
+    "event_level_summary": "median of repeated measurements per event",
+    "p95_confidence_interval": "percentile bootstrap over event medians (2000 replicates)"
+  },
+  "measurement_boundaries": {
+    "model_ready_inference": "Preprocessing and structural assembly completed before timing; measures only the frozen estimator or neural forward pass on a single event representation.",
+    "in_memory_raw_to_score": "Begins with the required raw rows already resident in memory and includes feature preprocessing, sequence or local-subgraph assembly, tensor conversion, and the frozen model forward pass. Excludes disk I/O, model deserialization, and network I/O."
+  },
+  "models": [
+    "physical_random_forest",
+    "cyber_random_forest",
+    "fused_random_forest",
+    "temporal_transformer",
+    "full_rgcn",
+    "ablated_rgcn"
+  ],
+  "rgcn_local_hops": 2,
+  "prediction_reproduction_max_abs_error": {
+    "physical_random_forest": 2.220446049250313e-16,
+    "cyber_random_forest": 1.1102230246251565e-16,
+    "fused_random_forest": 2.220446049250313e-16,
+    "temporal_transformer": 5.960464477539063e-08,
+    "full_rgcn": 1.1920928955078125e-07,
+    "ablated_rgcn": 1.1920928955078125e-07
+  },
+  "inputs": {
+    "data/processed/point_event_v2/nf3_alignment_v2/candidate_point_events_v2_with_context_and_nf3_primary.csv": "a936fa22142607802aa8a5c2141ae4adaa3292eac6bcbe5dc4b51c9e39819f15",
+    "data/processed/point_event_v2/modeling_v4/model_split_assignments_v4.csv": "21f95717ecf3c05c2f26c332bee80ac885adf62bf175d60715fb0387d8b4cd40",
+    "data/processed/point_event_v2/rgcn_leakage_safe_v2/selected_event_flow_edges_v2.csv": "e11c7cf4d5091ed3dbbe2c56741d554c67c693e76f5ef87ccbf2bb6bcb9976d6",
+    "data/processed/point_event_v2/rgcn_leakage_safe_v2/rgcn_config_v2.json": "584334f051afcd18c7f6ae5f53eaab8d7c4df6f7d189eb3a5a7695de26e7a83f"
+  },
+  "interpretation_boundary": "These measurements compare steady-state CPU scoring under matched software and thread conditions. They are not deployment service-level measurements."
+}

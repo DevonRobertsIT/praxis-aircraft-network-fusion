@@ -1,0 +1,3 @@
+comparison,left_model,left_test_auprc,right_model,right_test_auprc,auprc_difference
+R-GCN versus temporal Transformer,full_lag_relation,0.9110645425008407,causal_temporal_transformer,0.8861443628591895,0.024920179641651163
+Lag/relation-aware R-GCN versus ablation,full_lag_relation,0.9110645425008407,lag_relation_ablation,0.9011609401163276,0.009903602384513044

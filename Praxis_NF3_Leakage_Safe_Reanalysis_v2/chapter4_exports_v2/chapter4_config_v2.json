@@ -1,0 +1,13 @@
+{
+  "export_version": "chapter4_exports_v2",
+  "source_results_version": "results_v2",
+  "top_explanation_components": 8,
+  "figure_dpi": 300,
+  "table_formats": [
+    "csv",
+    "markdown",
+    "latex",
+    "html"
+  ],
+  "interpretation": "Controlled cross-domain alignment performance; not evidence of causal or site-coincident aircraft/cyber incidents."
+}

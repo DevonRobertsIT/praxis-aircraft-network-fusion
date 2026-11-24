@@ -1,0 +1,25 @@
+{
+  "package": "Praxis_NF3_Leakage_Safe_Reanalysis_v2",
+  "created_utc": "2026-09-03T21:45:34.410099+00:00",
+  "file_count_excluding_top_level_manifest": 252,
+  "uncompressed_bytes_excluding_top_level_manifest": 196962104,
+  "independent_validation": {
+    "decision": "PASS",
+    "passed_checks": 34,
+    "failed_checks": 0
+  },
+  "component_directories": [
+    "alignment_leakage_safe_v2",
+    "audit_original_v1",
+    "chapter4_exports_v2",
+    "code",
+    "control_evaluations_v2",
+    "notebooks",
+    "results_v2",
+    "rgcn_leakage_safe_v2",
+    "tabular_modeling_v4",
+    "transformer_v2",
+    "validation_v2",
+    "xai_leakage_safe_v2"
+  ]
+}

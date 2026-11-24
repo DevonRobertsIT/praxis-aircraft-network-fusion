@@ -1,0 +1,3 @@
+model,measurement_type,samples,latency_mean_ms,latency_p50_ms,latency_p95_ms
+R-GCN,local_subgraph_build_plus_forward_backward_attribution,10,28.144609997980297,21.241400012513623,59.079820013721424
+Temporal Transformer,local_forward_backward_attribution,10,6.301370006985962,6.208150007296354,6.9425450201379135

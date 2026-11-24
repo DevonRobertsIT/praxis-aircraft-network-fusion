@@ -1,0 +1,299 @@
+{
+  "definitions": {
+    "model_version": "rgcn_leakage_safe_v2",
+    "random_state": 43,
+    "primary_variant": "full_lag_relation",
+    "ablation_variant": "lag_relation_ablation",
+    "training_configuration": {
+      "hidden_dim": 64,
+      "layer_count": 2,
+      "dropout": 0.15,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "maximum_epochs": 2000,
+      "early_stopping_patience": 100,
+      "gradient_clip_norm": 1.0
+    },
+    "device": "cpu",
+    "graph_policy": {
+      "event_nodes": 7094,
+      "selected_flow_nodes": 25344,
+      "maximum_flows_per_event": 16,
+      "selection_uses_labels": false,
+      "flow_to_event_only": true,
+      "event_to_flow_edges": false,
+      "event_event_edges_are_causal": true,
+      "full_flow_relations": [
+        "flow_pre_event_to_event",
+        "flow_overlaps_event_to_event",
+        "flow_post_event_to_event",
+        "flow_other_to_event"
+      ],
+      "lag_weight_scale_s": 120.0
+    },
+    "hypothesis_criteria": {
+      "H2_required_auprc_margin": 0.03,
+      "H3_required_auprc_gain": 0.05,
+      "H3_max_p95_latency_ms": 500.0
+    }
+  },
+  "interpretation": {
+    "site_coincident_claim": false,
+    "causal_claim": false,
+    "statement": "The R-GCN uses controlled point-event/NF3 pairings and causal graph direction. It does not establish real simultaneous PANC aircraft and network events."
+  },
+  "inputs": {
+    "event_rows": 7094,
+    "unique_aircraft_keys": 1538,
+    "event_time_start_utc": "2025-01-01T18:24:59+00:00",
+    "event_time_end_utc": "2025-12-31T20:19:58+00:00",
+    "split_counts": {
+      "train": 4962,
+      "validation": 1117,
+      "test": 1015
+    },
+    "positive_targets": 3634,
+    "target_prevalence": 0.5122638849732168,
+    "input_sha256": {
+      "feature_bank": "423889b5a4d1dcd45c83314d58fd472511bfbee211efeb964b5b080a09e4dc75",
+      "event_flow_edges": "07c1fbce9544626cc375257983ac6401e241bb50e1b3214f7cce47787086761c",
+      "split_assignments": "623f4f133536112b0be416b771b1ecd9fd81730019a79203b8200cf62b7661e9",
+      "feature_manifest": "703915f5d8f01e77f8d13a32b1f4e70d309bfadd38c17e7f69e048542d802713",
+      "target_definition": "b1eb81f256075a25d65668d0bae0c987c824a7fba17e9c75d8213654c780574f",
+      "transformer_reference": "59ebdd049df47a320ea4fb37a5165c8307511f770c5f12260af0aa13268c26b5"
+    }
+  },
+  "graph": {
+    "model_version": "rgcn_leakage_safe_v2",
+    "node_counts": {
+      "event": 7094,
+      "flow": 25344,
+      "total": 32438
+    },
+    "selected_event_flow_edges": 113504,
+    "events_with_selected_flows": 7094,
+    "relations": {
+      "full_lag_relation": {
+        "site_previous_event": 7093,
+        "aircraft_previous_event": 5556,
+        "episode_previous_event": 6,
+        "flow_overlaps_event_to_event": 20753,
+        "flow_post_event_to_event": 56571,
+        "flow_pre_event_to_event": 36180
+      },
+      "lag_relation_ablation": {
+        "site_previous_event": 7093,
+        "aircraft_previous_event": 5556,
+        "episode_previous_event": 6,
+        "flow_to_event": 113504
+      },
+      "event_only_self_loop": {
+        "event_self": 7094
+      }
+    },
+    "event_features": {
+      "raw_numeric": [
+        "event_lag_seconds",
+        "stale_event_flag",
+        "latitude",
+        "longitude",
+        "distance_miles",
+        "altitude_ft",
+        "ground_speed_kt",
+        "vertical_speed_fpm",
+        "track_degrees",
+        "missing_hex_flag",
+        "missing_callsign_flag",
+        "gap_from_previous_same_aircraft_s",
+        "episode_sequence_number",
+        "episode_size",
+        "episode_max_internal_gap_s",
+        "episode_position",
+        "multi_observation_episode_flag",
+        "duration_observable_flag",
+        "observed_duration_s",
+        "prior_event_count",
+        "events_previous_1h",
+        "events_previous_24h",
+        "events_previous_7d",
+        "events_previous_30d",
+        "time_since_previous_event_s",
+        "prior_mean_altitude_ft",
+        "altitude_ft_deviation_from_prior_mean",
+        "prior_mean_ground_speed_kt",
+        "ground_speed_kt_deviation_from_prior_mean",
+        "prior_mean_distance_miles",
+        "distance_miles_deviation_from_prior_mean",
+        "prior_mean_vertical_speed_fpm",
+        "vertical_speed_fpm_deviation_from_prior_mean",
+        "recurrence_1h_flag",
+        "recurrence_24h_flag",
+        "recurrence_7d_flag",
+        "recurrence_30d_flag",
+        "first_observed_aircraft_event_flag",
+        "site_events_previous_1h",
+        "site_events_previous_24h",
+        "site_events_previous_7d",
+        "nf3_flow_count",
+        "nf3_flow_duration_sum_s",
+        "nf3_flow_duration_mean_s",
+        "nf3_flow_duration_median_s",
+        "nf3_flow_duration_std_s",
+        "nf3_flow_duration_max_s",
+        "nf3_packet_total_sum",
+        "nf3_packet_total_mean",
+        "nf3_packet_total_max",
+        "nf3_byte_total_sum",
+        "nf3_byte_total_mean",
+        "nf3_byte_total_max",
+        "nf3_protocol_unique_count",
+        "nf3_src_ip_unique_count",
+        "nf3_dst_ip_unique_count",
+        "nf3_src_port_unique_count",
+        "nf3_dst_port_unique_count",
+        "nf3_pre_event_flow_count",
+        "nf3_at_event_flow_count",
+        "nf3_post_event_flow_count",
+        "nf3_nearest_flow_start_lag_s",
+        "nf3_first_flow_start_lag_s",
+        "nf3_last_flow_start_lag_s",
+        "nf3_total_overlap_duration_s",
+        "nf3_mean_overlap_duration_s",
+        "nf3_max_overlap_duration_s",
+        "nf3_iat_src_to_dst_iat_min_mean",
+        "nf3_iat_src_to_dst_iat_min_std",
+        "nf3_iat_src_to_dst_iat_max_mean",
+        "nf3_iat_src_to_dst_iat_max_std",
+        "nf3_iat_src_to_dst_iat_avg_mean",
+        "nf3_iat_src_to_dst_iat_avg_std",
+        "nf3_iat_src_to_dst_iat_stddev_mean",
+        "nf3_iat_src_to_dst_iat_stddev_std",
+        "nf3_iat_dst_to_src_iat_min_mean",
+        "nf3_iat_dst_to_src_iat_min_std",
+        "nf3_iat_dst_to_src_iat_max_mean",
+        "nf3_iat_dst_to_src_iat_max_std",
+        "nf3_iat_dst_to_src_iat_avg_mean",
+        "nf3_iat_dst_to_src_iat_avg_std",
+        "nf3_iat_dst_to_src_iat_stddev_mean",
+        "nf3_iat_dst_to_src_iat_stddev_std"
+      ],
+      "raw_categorical": [
+        "source_type",
+        "aircraft_key_source"
+      ],
+      "dropped_training_constant_or_empty": [
+        "episode_gap_threshold_s",
+        "window_boundary_truncated_flag",
+        "deduplication_status"
+      ],
+      "transformed_count": 100
+    },
+    "flow_features": {
+      "raw_numeric": [
+        "flow_duration_s",
+        "src_port",
+        "dst_port"
+      ],
+      "raw_categorical": [
+        "protocol"
+      ],
+      "dropped_training_constant_or_empty": [],
+      "transformed_count": 26
+    }
+  },
+  "outputs": {
+    "model_runs": 3,
+    "prediction_rows": 6396,
+    "history_rows": 1106,
+    "feature_attribution_rows": 126,
+    "relation_norm_rows": 22,
+    "saved_model_files": 3,
+    "saved_preprocessor_files": 2,
+    "saved_figure_files": 12,
+    "rgcn_reference": {
+      "model_version": "rgcn_leakage_safe_v2",
+      "model": "causal_heterogeneous_rgcn",
+      "primary_variant": "full_lag_relation",
+      "target_definition": {
+        "mode": "raw_any_attack_window_label",
+        "model_target_column": "model_target",
+        "source_column": "cyber_attack_window_label",
+        "operator": "identity",
+        "threshold": null,
+        "training_positive_fraction": 0.6046429827646852,
+        "full_positive_fraction": 0.5745588838736151,
+        "reason": "The raw Notebook 03 target contained both classes overall and in chronological training."
+      },
+      "selected_threshold": 0.38893264532089233,
+      "validation_auprc": 0.9493286012941917,
+      "test_auprc": 0.893139580782734,
+      "test_f1": 0.7929824561403509,
+      "test_recall": 0.773972602739726,
+      "local_latency_p95_ms": 3.3848899824079126,
+      "transformer_test_auprc": 0.9027434804936514,
+      "h2_auprc_margin": -0.009603899710917352,
+      "h2_supported": false,
+      "ablation_test_auprc": 0.9105568720250818,
+      "h3_auprc_gain": -0.01741729124234781,
+      "h3_latency_pass": true,
+      "h3_supported": false,
+      "interpretation": "Controlled cross-domain alignment performance; not evidence of a site-coincident or causal aircraft-cyber relationship."
+    }
+  },
+  "environment": {
+    "created_utc": "2026-09-22T21:31:55.162212+00:00",
+    "python": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pandas": "2.2.3",
+    "numpy": "2.2.4",
+    "scikit_learn": "1.6.1",
+    "torch": "2.8.0+cpu",
+    "device": "cpu",
+    "cuda_available": false,
+    "cuda_device_name": null
+  },
+  "regression_checks": [
+    {
+      "metric": "feature_rows_equal_split_rows",
+      "expected": 7094,
+      "actual": 7094,
+      "match": true
+    },
+    {
+      "metric": "selected_edges_obey_per_event_bound",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "metric": "selected_edge_table_contains_no_label_columns",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "metric": "all_event_edges_are_causal",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "metric": "all_rgcn_variants_completed",
+      "expected": 3,
+      "actual": 3,
+      "match": true
+    },
+    {
+      "metric": "test_prediction_rows_for_each_variant",
+      "expected": 3045,
+      "actual": 3045,
+      "match": true
+    },
+    {
+      "metric": "full_local_p95_latency_under_500ms",
+      "expected": true,
+      "actual": true,
+      "match": true
+    }
+  ]
+}

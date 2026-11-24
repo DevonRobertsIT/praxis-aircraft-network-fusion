@@ -1,0 +1,29 @@
+{
+  "model_version": "rgcn_leakage_safe_v2",
+  "model": "causal_heterogeneous_rgcn",
+  "primary_variant": "full_lag_relation",
+  "target_definition": {
+    "mode": "raw_any_attack_window_label",
+    "model_target_column": "model_target",
+    "source_column": "cyber_attack_window_label",
+    "operator": "identity",
+    "threshold": null,
+    "training_positive_fraction": 0.6046429827646852,
+    "full_positive_fraction": 0.5745588838736151,
+    "reason": "The raw Notebook 03 target contained both classes overall and in chronological training."
+  },
+  "selected_threshold": 0.011821310967206955,
+  "validation_auprc": 0.9999769755777813,
+  "test_auprc": 0.9997166984937911,
+  "test_f1": 0.9860557768924303,
+  "test_recall": 0.9753694581280788,
+  "local_latency_p95_ms": 3.8390700094169006,
+  "transformer_test_auprc": 0.9998934784574467,
+  "h2_auprc_margin": -0.00017677996365561555,
+  "h2_supported": false,
+  "ablation_test_auprc": 0.9991903090818989,
+  "h3_auprc_gain": 0.000526389411892203,
+  "h3_latency_pass": true,
+  "h3_supported": false,
+  "interpretation": "Controlled cross-domain alignment performance; not evidence of a site-coincident or causal aircraft-cyber relationship."
+}

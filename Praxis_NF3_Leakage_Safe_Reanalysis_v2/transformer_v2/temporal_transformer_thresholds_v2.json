@@ -1,0 +1,7 @@
+{
+  "fused": {
+    "threshold": 0.3674864172935486,
+    "policy": "maximize_validation_f1",
+    "validation_f1": 0.986096256684492
+  }
+}

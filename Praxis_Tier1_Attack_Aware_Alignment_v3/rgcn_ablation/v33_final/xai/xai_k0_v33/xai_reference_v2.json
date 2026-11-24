@@ -1,0 +1,46 @@
+{
+  "model_version": "xai_validation_v2",
+  "supporting_xai_question": "How faithfully, consistently, traceably, and efficiently do feature-, temporal-, and relation-level explanations characterize the evidence contributing to candidate low-altitude event risk scores?",
+  "hypothesis_policy": "Notebook 09 does not modify H1, H2, or H3.",
+  "fidelity": {
+    "primary_metric": "mean_absolute_probability_change",
+    "mean_top_ranked_probability_change": 0.1914929056564875,
+    "mean_random_matched_probability_change": 0.07750023578956346,
+    "top_minus_random_probability_change": 0.11399266986692404,
+    "mean_top_ranked_positive_probability_drop": 0.08177959748648678,
+    "mean_random_matched_positive_probability_drop": 0.007892780536638042,
+    "secondary_mean_top_ranked_auprc_drop": 0.001405233069825133,
+    "secondary_mean_random_matched_auprc_drop": -0.0039318468421184844
+  },
+  "stability": {
+    "mean_top_k_jaccard": 0.8461538461538461,
+    "mean_spearman_rank_correlation": 0.840299901657017,
+    "noise_std": 0.01,
+    "top_k": 10
+  },
+  "relation_consistency": {
+    "spearman_norm_vs_auprc_drop": -0.14285714285714288,
+    "spearman_norm_vs_probability_change": -0.4285714285714286
+  },
+  "provenance": {
+    "audit_checks": 8,
+    "passed_checks": 8,
+    "pass_fraction": 1.0
+  },
+  "explanation_latency": {
+    "R-GCN": {
+      "samples": 10,
+      "mean_ms": 20.73221001191996,
+      "p50_ms": 20.424500020453706,
+      "p95_ms": 23.053535007056777
+    },
+    "Temporal Transformer": {
+      "samples": 10,
+      "mean_ms": 6.453190016327426,
+      "p50_ms": 6.30580002325587,
+      "p95_ms": 7.439080029143951
+    }
+  },
+  "analyst_cases": 5,
+  "interpretation_boundary": "XAI outputs describe model influence. They do not establish causal linkage, real site coincidence, or proof that an aircraft generated the replayed network activity."
+}

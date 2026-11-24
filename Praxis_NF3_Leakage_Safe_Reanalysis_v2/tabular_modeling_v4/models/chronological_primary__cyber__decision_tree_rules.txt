@@ -1,0 +1,19 @@
+|--- numeric__nf3_dst_ip_unique_count <= 21.5000
+|   |--- numeric__nf3_iat_dst_to_src_iat_stddev_mean <= 60.5188
+|   |   |--- numeric__missingindicator_nf3_iat_dst_to_src_iat_avg_mean <= 0.5000
+|   |   |   |--- class: 0
+|   |   |--- numeric__missingindicator_nf3_iat_dst_to_src_iat_avg_mean >  0.5000
+|   |   |   |--- class: 0
+|   |--- numeric__nf3_iat_dst_to_src_iat_stddev_mean >  60.5188
+|   |   |--- class: 0
+|--- numeric__nf3_dst_ip_unique_count >  21.5000
+|   |--- numeric__nf3_byte_total_max <= 1120208.0000
+|   |   |--- numeric__nf3_packet_total_sum <= 552392.5000
+|   |   |   |--- class: 1
+|   |   |--- numeric__nf3_packet_total_sum >  552392.5000
+|   |   |   |--- class: 1
+|   |--- numeric__nf3_byte_total_max >  1120208.0000
+|   |   |--- numeric__nf3_iat_src_to_dst_iat_min_std <= 202.2784
+|   |   |   |--- class: 1
+|   |   |--- numeric__nf3_iat_src_to_dst_iat_min_std >  202.2784
+|   |   |   |--- class: 1

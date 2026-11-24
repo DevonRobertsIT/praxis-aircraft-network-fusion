@@ -1,0 +1,3 @@
+feature_set,model,numeric_features,categorical_features,train_rows,validation_rows,test_rows,test_positives,selected_threshold,test_auprc,test_roc_auc,test_f1,test_precision,test_recall,test_brier_score,test_tp,test_fp,test_fn,test_tn
+cyber,random_forest,42,0,8529,1828,1828,1015,0.7440765107044297,1.0,1.0,0.9910536779324056,1.0,0.9822660098522168,0.004509030173447509,997,0,18,813
+cyber,logistic_regression,42,0,8529,1828,1828,1015,0.9569710014575312,0.9999643114393779,0.9999551621131975,0.9465490399584847,1.0,0.8985221674876848,0.009198441148053833,912,0,103,813

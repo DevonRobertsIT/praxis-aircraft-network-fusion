@@ -1,0 +1,17 @@
+split,replay_cycle_index,event_rows,events_with_primary_flows
+train,0,619,23
+train,1,506,32
+train,2,1081,33
+train,3,918,44
+train,4,1012,42
+train,5,1055,28
+train,6,911,32
+train,7,666,46
+train,8,1155,10
+train,9,606,2
+validation,9,635,18
+validation,10,874,51
+validation,11,319,18
+test,11,644,0
+test,12,846,50
+test,13,338,30

@@ -1,0 +1,252 @@
+{
+ "manuscript_version": "6.4",
+ "generated_from": [
+  "final_reproduction/reproduced_seed_level_inference_v33.csv",
+  "final_reproduction/reproduced_table_4_12_v33.csv",
+  "review_corrections_v31/h1prime_paired_jitter_loss_aggregate_v31.csv",
+  "review_corrections_v31/h5_fusion_vs_best_unimodal_v31.csv"
+ ],
+ "H1prime_a": {
+  "labels_changed": "2 of 12,185 (0.016%)",
+  "auprc_loss": 0.0,
+  "decision": "not supported"
+ },
+ "H1prime_b": {
+  "cyber_LR_kappa0_sigma120": {
+   "loss_mean": 0.033,
+   "t_ci_95": [
+    0.0146,
+    0.0515
+   ],
+   "seeds_ci_gt0": 1,
+   "rule_met": false
+  },
+  "cyber_LR_kappa0_sigma300": {
+   "loss_mean": 0.1295,
+   "t_ci_95": [
+    0.0883,
+    0.1706
+   ],
+   "seeds_ci_gt0": 5,
+   "rule_met": true
+  },
+  "decision": "not supported at 120 s under the stated rule; rule met at 300 s"
+ },
+ "H2prime": {
+  "kappa0": {
+   "mean": 0.0656,
+   "t_ci_95": [
+    0.0129,
+    0.1183
+   ],
+   "seeds_positive": 7,
+   "p_two_sided": 0.0201,
+   "note": "bin-cluster CI counts are Monte Carlo quantities; see manuscript 4.7.3"
+  },
+  "kappa1": {
+   "mean": 0.0297,
+   "t_ci_95": [
+    0.0046,
+    0.0549
+   ],
+   "seeds_positive": 7,
+   "p_two_sided": 0.0255,
+   "note": "bin-cluster CI counts are Monte Carlo quantities; see manuscript 4.7.3"
+  },
+  "seeds_bin_ci_gt0": {
+   "kappa0": 5,
+   "kappa1": 5
+  },
+  "decision": "not supported under the stated rule; positive mean advantage reported descriptively"
+ },
+ "H3prime": {
+  "kappa0": {
+   "mean": 0.0204,
+   "t_ci_95": [
+    -0.0036,
+    0.0444
+   ],
+   "seeds_positive": 7,
+   "p_two_sided": 0.0865,
+   "note": "bin-cluster CI counts are Monte Carlo quantities; see manuscript 4.7.3"
+  },
+  "kappa1": {
+   "mean": 0.01,
+   "t_ci_95": [
+    -0.0034,
+    0.0235
+   ],
+   "seeds_positive": 7,
+   "p_two_sided": 0.1255,
+   "note": "bin-cluster CI counts are Monte Carlo quantities; see manuscript 4.7.3"
+  },
+  "decision": "not supported; did not demonstrate a reliable improvement or meet the 0.05 criterion"
+ },
+ "H4": {
+  "kappa0": {
+   "mean": 0.0644,
+   "t_ci_95": [
+    0.021,
+    0.1079
+   ],
+   "seeds_positive": 8,
+   "p_two_sided": 0.0085,
+   "note": "bin-cluster CI counts are Monte Carlo quantities; see manuscript 4.7.3"
+  },
+  "kappa1": {
+   "mean": 0.021,
+   "t_ci_95": [
+    -0.0028,
+    0.0448
+   ],
+   "seeds_positive": 8,
+   "p_two_sided": 0.0776,
+   "note": "bin-cluster CI counts are Monte Carlo quantities; see manuscript 4.7.3"
+  },
+  "decision": "supported at kappa 0; not supported under the stated criterion at kappa 1 (point estimate positive)"
+ },
+ "event_only_minus_transformer": {
+  "kappa0": {
+   "mean": 0.0012,
+   "t_ci_95": [
+    -0.0583,
+    0.0607
+   ],
+   "seeds_positive": 5,
+   "p_two_sided": 0.9644,
+   "note": "bin-cluster CI counts are Monte Carlo quantities; see manuscript 4.7.3"
+  },
+  "kappa1": {
+   "mean": 0.0088,
+   "t_ci_95": [
+    -0.0232,
+    0.0407
+   ],
+   "seeds_positive": 4,
+   "p_two_sided": 0.5492,
+   "note": "bin-cluster CI counts are Monte Carlo quantities; see manuscript 4.7.3"
+  }
+ },
+ "H5": {
+  "zero_jitter_late_fusion_RF_vs_best_unimodal": {
+   "kappa_0": {
+    "gain_mean": -0.0011,
+    "seeds_ci_gt0": 0,
+    "detected": false
+   },
+   "kappa_0.1": {
+    "gain_mean": 0.0032,
+    "seeds_ci_gt0": 0,
+    "detected": false
+   },
+   "kappa_0.25": {
+    "gain_mean": 0.0283,
+    "seeds_ci_gt0": 1,
+    "detected": false
+   },
+   "kappa_0.5": {
+    "gain_mean": 0.0863,
+    "seeds_ci_gt0": 4,
+    "detected": false
+   },
+   "kappa_0.75": {
+    "gain_mean": 0.1396,
+    "seeds_ci_gt0": 4,
+    "detected": false
+   },
+   "kappa_1": {
+    "gain_mean": -0.0179,
+    "seeds_ci_gt0": 0,
+    "detected": false
+   }
+  },
+  "exploratory_nonzero_jitter_detections": [
+   {
+    "kappa": 0.5,
+    "sigma": 60.0,
+    "model": "random_forest",
+    "fusion": "late",
+    "gain_mean": 0.0825
+   },
+   {
+    "kappa": 0.5,
+    "sigma": 120.0,
+    "model": "random_forest",
+    "fusion": "late",
+    "gain_mean": 0.0898
+   },
+   {
+    "kappa": 0.5,
+    "sigma": 300.0,
+    "model": "random_forest",
+    "fusion": "late",
+    "gain_mean": 0.0747
+   },
+   {
+    "kappa": 1.0,
+    "sigma": 300.0,
+    "model": "logistic_regression",
+    "fusion": "late",
+    "gain_mean": 0.0563
+   },
+   {
+    "kappa": 1.0,
+    "sigma": 300.0,
+    "model": "logistic_regression",
+    "fusion": "fused",
+    "gain_mean": 0.0675
+   }
+  ],
+  "decision": "not supported as pre-specified; exploratory support under jitter (five combinations in four cells)"
+ },
+ "table_4_12_means": [
+  {
+   "target": "intensity",
+   "kappa": 0.0,
+   "transformer": 0.7768,
+   "original_budget_rgcn_full": 0.5803,
+   "rgcn_full": 0.793,
+   "rgcn_ablation": 0.8032,
+   "rgcn_event_only": 0.7483,
+   "budget": 0.2127
+  },
+  {
+   "target": "intensity",
+   "kappa": 1.0,
+   "transformer": 0.8744,
+   "original_budget_rgcn_full": 0.6993,
+   "rgcn_full": 0.9065,
+   "rgcn_ablation": 0.9032,
+   "rgcn_event_only": 0.8933,
+   "budget": 0.2073
+  },
+  {
+   "target": "regime",
+   "kappa": null,
+   "transformer": 0.9999,
+   "original_budget_rgcn_full": 0.9542,
+   "rgcn_full": 0.9996,
+   "rgcn_ablation": 0.9996,
+   "rgcn_event_only": 0.9977,
+   "budget": 0.0454
+  }
+ ],
+ "seed_level_assumption_checks": {
+  "source": "final_reproduction/seed_level_assumption_checks_v6_1.csv (code/42_seed_level_assumption_checks.py)",
+  "shapiro_wilk_min_p": 0.0798,
+  "all_shapiro_wilk_p_gt_0_05": true,
+  "H4_kappa0": {
+   "t_test_p": 0.0085,
+   "permutation_p": 0.0098
+  },
+  "H2prime_kappa0": {
+   "t_test_p": 0.0201,
+   "permutation_p": 0.0234
+  },
+  "H2prime_kappa1": {
+   "t_test_p": 0.0255,
+   "permutation_p": 0.0312
+  },
+  "hypothesis_decision_changes": 0
+ }
+}

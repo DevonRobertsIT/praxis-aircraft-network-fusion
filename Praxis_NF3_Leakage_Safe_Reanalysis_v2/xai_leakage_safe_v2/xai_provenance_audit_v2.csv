@@ -1,0 +1,9 @@
+check,expected,actual,passed,note
+all_point_events_have_event_nodes,12185,12185,True,Point-event IDs must map one-to-one to R-GCN event nodes.
+selected_edge_event_ids_trace_to_point_events,12070,12070,True,Every selected edge must point to a frozen candidate event.
+selected_flow_ids_trace_to_flow_nodes,173625,173625,True,Every selected flow must map to an R-GCN flow node.
+analyst_case_event_ids_trace_to_point_events,5,5,True,Every analyst case must trace to a source point event.
+transformer_feature_names_match_checkpoint,129,129,True,Reconstructed feature identities must match the frozen checkpoint.
+transformer_predictions_reproduced,max abs error <= 1e-5,1.1102230246251565e-16,True,Perturbation tests are valid only if the frozen prediction is reproduced.
+rgcn_predictions_reproduced,max abs error <= 1e-5,1.1102230246251565e-16,True,Perturbation tests are valid only if the frozen prediction is reproduced.
+controlled_alignment_disclaimer_present,True,True,True,Every analyst case must preserve the controlled-replay interpretation boundary.

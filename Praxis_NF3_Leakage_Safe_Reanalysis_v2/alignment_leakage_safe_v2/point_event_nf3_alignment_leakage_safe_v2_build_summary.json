@@ -1,0 +1,47 @@
+{
+  "alignment_version": "point_event_nf3_alignment_leakage_safe_v2",
+  "status": "corrected_leakage_safe_rerun",
+  "frozen_aircraft_splits_retained": true,
+  "mapping": {
+    "source_sessions_detected": 2,
+    "source_blocks": 6,
+    "inter_partition_embargo_s": 1200,
+    "safe_center_inset_s": 600,
+    "windows": {
+      "primary_120s": 120,
+      "sensitivity_300s": 300,
+      "sensitivity_600s": 600
+    },
+    "materialized_edges_per_event_maximum": 16,
+    "full_edge_materialization": false,
+    "full_edge_note": "All relationships were used for aggregation and the recurrence mask. Only the 16 label-blind nearest relationships per event were materialized because the active-session remapping produces a very large redundant edge table and downstream R-GCN code bounds at 16."
+  },
+  "inputs": {
+    "context_rows": 12185,
+    "nf3_flow_rows": 2365424,
+    "recovery_archive_sha256": "e0db18e30539895b147845d5ec99828fc26c22b768c2a7e29325b114bf2eef8d",
+    "context_sha256": "15a378c38434ef5613387135f692a481d635cb8d5261d0a0890cbcdce8438109",
+    "frozen_split_sha256": "ee0f3b3d92e12cd8dbcd5bd29448f8ba314eb7ca2c1620d3d882d3a311d1ee19"
+  },
+  "outputs": {
+    "event_rows": 12185,
+    "window_feature_rows": 36555,
+    "target_rows": 36555,
+    "primary_full_relationship_count": 78620868,
+    "primary_materialized_bounded_edge_rows": 192956,
+    "primary_events_with_flows": 12070,
+    "primary_positive_windows": 7001,
+    "primary_negative_windows": 5184,
+    "primary_prevalence": 0.5745588838736151
+  },
+  "independence_gate": {
+    "exact_source_flow_recurrence": 0,
+    "mapped_source_window_overlap": false,
+    "decision": "PASS"
+  },
+  "interpretation": {
+    "site_coincident_claim": false,
+    "causal_claim": false,
+    "statement": "Physical/cyber relationships remain controlled, modeled pairings. Leakage-safe source partitioning does not establish historical co-occurrence or causation."
+  }
+}

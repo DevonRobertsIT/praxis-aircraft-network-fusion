@@ -1,0 +1,12 @@
+artifact,artifact_role
+model_split_assignments_v4.csv,"Event-level chronological and optional aircraft-group split assignments, including raw and model targets."
+baseline_model_results_v4.csv,"Validation/test metrics, thresholds, feature counts, fit time, and latency for every model run."
+baseline_test_predictions_v4.csv,Event-level held-out test probabilities and thresholded predictions.
+baseline_thresholds_v4.json,Validation-selected thresholds and threshold-selection metadata.
+model_target_definition_v4.json,"Frozen model-target source, operator, threshold, prevalence, and fallback rationale."
+logistic_coefficients_v4.csv,Expanded standardized logistic-regression coefficients.
+tree_feature_importance_v4.csv,Expanded tree and random-forest impurity feature importances.
+permutation_importance_v4.csv,Input-column permutation importance for chronological fused random forest when test classes permit it.
+baseline_latency_results_v4.csv,Single-event end-to-end predict_proba latency measurements summarized by model run.
+fused_gain_summary_v4.csv,Fused test AUPRC minus the strongest unimodal test AUPRC when those metrics are defined.
+feature_manifest_v4.json,Frozen feature-set definitions and exclusion policies.

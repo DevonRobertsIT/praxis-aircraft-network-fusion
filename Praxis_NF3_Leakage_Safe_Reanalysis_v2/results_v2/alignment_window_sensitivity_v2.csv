@@ -1,0 +1,4 @@
+window_half_width_s,window_name,events,events_with_flows,flow_coverage_fraction,median_flow_count,mean_flow_count,maximum_flow_count,positive_targets,target_prevalence,target_changes_vs_primary,positive_jaccard_vs_primary,boundary_truncated_events
+120,primary_120s,12185,12070,0.9905621665982766,6701.0,6452.266557242511,9395,7001,0.5745588838736151,0,1.0,0
+300,sensitivity_300s,12185,12135,0.9958965941731637,16312.0,16083.350348789496,21895,7057,0.5791546983996717,56,0.9920646166926456,0
+600,sensitivity_600s,12185,12185,1.0,32661.0,32124.43348379155,41812,7107,0.583258104226508,106,0.985085127339243,0

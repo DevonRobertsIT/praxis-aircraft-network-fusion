@@ -1,0 +1,51 @@
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Model</th>
+      <th>Reported subgroups</th>
+      <th>Minimum subgroup AUPRC</th>
+      <th>Median subgroup AUPRC</th>
+      <th>Maximum subgroup AUPRC</th>
+      <th>Lowest subgroup</th>
+      <th>Highest subgroup</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>R-GCN — full lag/relation</td>
+      <td>5</td>
+      <td>0.9169</td>
+      <td>0.9179</td>
+      <td>0.9183</td>
+      <td>recurrence_context: first_observed_event</td>
+      <td>recurrence_context: prior_event_present</td>
+    </tr>
+    <tr>
+      <td>R-GCN — lag/relation ablation</td>
+      <td>5</td>
+      <td>0.9057</td>
+      <td>0.9060</td>
+      <td>0.9123</td>
+      <td>source_type: ADSB</td>
+      <td>recurrence_context: first_observed_event</td>
+    </tr>
+    <tr>
+      <td>Fused tabular — decision_tree</td>
+      <td>5</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>source_type: ADSB</td>
+      <td>timestamp_freshness: non_stale</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer — fused</td>
+      <td>5</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>recurrence_context: prior_event_present</td>
+      <td>recurrence_context: first_observed_event</td>
+    </tr>
+  </tbody>
+</table>

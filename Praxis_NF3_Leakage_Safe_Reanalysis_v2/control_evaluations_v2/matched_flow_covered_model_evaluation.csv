@@ -1,0 +1,7 @@
+analysis_version,evaluation,model,matched_pairs,match_design,quantile_bins_per_variable,threshold,rows,positives,prevalence,auprc,roc_auc,precision,recall,f1,balanced_accuracy,brier_score,tn,fp,fn,tp
+frozen_v1,primary_cem_matched_flow_covered_test,any_flow,21,coarsened_exact_matching,3,0.5,42,21,0.5,0.5,0.5,0.5,1.0,0.6666666666666666,0.5,0.5,0,21,0,21
+frozen_v1,primary_cem_matched_flow_covered_test,cyber_random_forest,21,coarsened_exact_matching,3,0.6177538981801627,42,21,0.5,0.9940476190476191,0.9931972789115646,1.0,0.9523809523809523,0.975609756097561,0.9761904761904762,0.044338909933638336,21,0,1,20
+frozen_v1,primary_cem_matched_flow_covered_test,fused_random_forest,21,coarsened_exact_matching,3,0.6494014116569785,42,21,0.5,0.9908424908424909,0.9886621315192743,1.0,0.9523809523809523,0.975609756097561,0.9761904761904762,0.06961562871750425,21,0,1,20
+leakage_safe_v2,primary_cem_matched_flow_covered_test,any_flow,531,coarsened_exact_matching,2,0.5,1062,531,0.5,0.5,0.5,0.5,1.0,0.6666666666666666,0.5,0.5,0,531,0,531
+leakage_safe_v2,primary_cem_matched_flow_covered_test,cyber_random_forest,531,coarsened_exact_matching,2,0.6603572969503753,1062,531,0.5,1.0,1.0,1.0,1.0,1.0,1.0,0.0030526261400676065,531,0,0,531
+leakage_safe_v2,primary_cem_matched_flow_covered_test,fused_random_forest,531,coarsened_exact_matching,2,0.6451147869472418,1062,531,0.5,1.0,0.9999999999999999,1.0,1.0,1.0,1.0,0.006262392721394714,531,0,0,531

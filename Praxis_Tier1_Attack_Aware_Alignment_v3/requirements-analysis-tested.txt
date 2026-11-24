@@ -1,0 +1,8 @@
+# Tested 23 Sep 2026 on Linux, Python 3.12.3
+pandas==3.0.2
+numpy==2.4.4
+scipy==1.17.1
+scikit-learn==1.8.0
+matplotlib==3.10.8
+tabulate==0.10.0
+joblib==1.5.3

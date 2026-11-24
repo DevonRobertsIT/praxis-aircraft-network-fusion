@@ -1,0 +1,14 @@
+\begin{table}
+\caption{Descriptive range of subgroup AUPRC values under each model's frozen threshold. These summaries are diagnostic and are not additional hypothesis tests.}
+\label{tab:subgroup-robustness}
+\begin{tabular}{lllllll}
+\toprule
+Model & Reported subgroups & Minimum subgroup AUPRC & Median subgroup AUPRC & Maximum subgroup AUPRC & Lowest subgroup & Highest subgroup \\
+\midrule
+R-GCN — full lag/relation & 5 & 0.9169 & 0.9179 & 0.9183 & recurrence\_context: first\_observed\_event & recurrence\_context: prior\_event\_present \\
+R-GCN — lag/relation ablation & 5 & 0.9057 & 0.9060 & 0.9123 & source\_type: ADSB & recurrence\_context: first\_observed\_event \\
+Fused tabular — decision\_tree & 5 & 1.0000 & 1.0000 & 1.0000 & source\_type: ADSB & timestamp\_freshness: non\_stale \\
+Temporal Transformer — fused & 5 & 1.0000 & 1.0000 & 1.0000 & recurrence\_context: prior\_event\_present & recurrence\_context: first\_observed\_event \\
+\bottomrule
+\end{tabular}
+\end{table}

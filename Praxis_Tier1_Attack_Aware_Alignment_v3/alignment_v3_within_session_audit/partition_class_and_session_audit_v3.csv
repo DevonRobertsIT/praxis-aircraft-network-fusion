@@ -1,0 +1,4 @@
+partition,events,positives,negatives,both_classes_present,session_indicator_auprc,session_indicator_roc_auc,sessions_present,independent_240s_source_bins_positive,independent_240s_source_bins_negative
+train,8529,4761,3768,True,0.9688215963284167,0.9647132955261499,S1|S2,133,106
+validation,1828,1043,785,True,0.9505927817207979,0.9424736337488016,S1|S2,25,19
+test,1828,1016,812,True,0.9571538103688899,0.9517716535433071,S1|S2,28,21

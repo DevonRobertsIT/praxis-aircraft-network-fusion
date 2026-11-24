@@ -1,0 +1,7 @@
+{
+  "recovery_archive_name": "Praxis_Recovery_01_Core_Artifacts.zip",
+  "recovery_archive_sha256": "e0db18e30539895b147845d5ec99828fc26c22b768c2a7e29325b114bf2eef8d",
+  "raw_nf3_entry": "Project/Jupyter Notebook/data/Netflow/NF-UNSW-NB15-v3.csv",
+  "original_full_edge_entry": "Project/Jupyter Notebook/data/processed/point_event_v1/nf3_alignment_v1/event_flow_edges_primary_v1.csv",
+  "note": "The 218 MB recovery archive is referenced by checksum but is not duplicated inside this handoff package."
+}

@@ -1,0 +1,9 @@
+{
+  "scale_source": "train",
+  "overlap_scale_used_s": 119.647,
+  "training_max_overlap_s": 119.647,
+  "global_max_overlap_s": 119.966,
+  "training_edges": 79392,
+  "all_edges": 113504,
+  "max_weight_change_vs_global": 0.0002753188080129032
+}

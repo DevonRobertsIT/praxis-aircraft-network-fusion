@@ -1,0 +1,4 @@
+left_split,right_split,left_unique_source_flows,right_unique_source_flows,reused_source_flows
+train,validation,1605071,317683,0
+train,test,1605071,310909,0
+validation,test,317683,310909,0

@@ -1,0 +1,5 @@
+analysis_version,matching_variable,before_absolute_smd,after_absolute_smd,before_rows,after_rows,matched_pairs,match_design,quantile_bins_per_variable
+frozen_v1,log1p(nf3_flow_count),0.2381862624988731,0.08845166777726339,80,42,21,coarsened_exact_matching,3
+frozen_v1,log1p(nf3_flow_duration_sum_s),0.5572689041312302,0.07744876726065905,80,42,21,coarsened_exact_matching,3
+leakage_safe_v2,log1p(nf3_flow_count),0.5232429064126254,0.0804075376354381,1828,1062,531,coarsened_exact_matching,2
+leakage_safe_v2,log1p(nf3_flow_duration_sum_s),0.9466168574483895,0.0324401961485907,1828,1062,531,coarsened_exact_matching,2

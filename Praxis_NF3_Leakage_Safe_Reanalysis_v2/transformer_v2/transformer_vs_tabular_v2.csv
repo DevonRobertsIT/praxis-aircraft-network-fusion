@@ -1,0 +1,2 @@
+model_version,transformer_feature_set,transformer_test_auprc,best_tabular_model,best_tabular_test_auprc,transformer_minus_tabular_auprc
+temporal_transformer_leakage_safe_v2,fused,0.9999964010149138,decision_tree,1.0,-3.5989850861728456e-06

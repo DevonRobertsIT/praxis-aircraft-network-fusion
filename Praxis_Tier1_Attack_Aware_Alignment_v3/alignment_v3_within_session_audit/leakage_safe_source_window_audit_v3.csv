@@ -1,0 +1,4 @@
+left_split,right_split,source_window_overlap_detected
+train,validation,False
+train,test,False
+validation,test,False

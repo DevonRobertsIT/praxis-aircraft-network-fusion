@@ -1,0 +1,14 @@
+{
+  "results_version": "results_v2",
+  "random_state": 8499,
+  "bootstrap_iterations": 2000,
+  "bootstrap_policy": "paired stratified resampling of common held-out events",
+  "minimum_subgroup_rows": 25,
+  "primary_window_half_width_s": 120,
+  "hypothesis_criteria": {
+    "H1_required_mae_reduction_s": 1.0,
+    "H2_required_auprc_margin": 0.03,
+    "H3_required_auprc_gain": 0.05,
+    "H3_max_p95_latency_ms": 500.0
+  }
+}

@@ -1,0 +1,64 @@
+|--- numeric__site_events_previous_24h <= 73.5000
+|   |--- numeric__site_events_previous_7d <= 324.5000
+|   |   |--- numeric__prior_mean_altitude_ft <= 789.5833
+|   |   |   |--- numeric__prior_mean_vertical_speed_fpm <= 660.7719
+|   |   |   |   |--- numeric__latitude <= 61.1874
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- numeric__latitude >  61.1874
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- numeric__prior_mean_vertical_speed_fpm >  660.7719
+|   |   |   |   |--- numeric__longitude <= -150.0049
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- numeric__longitude >  -150.0049
+|   |   |   |   |   |--- class: 1
+|   |   |--- numeric__prior_mean_altitude_ft >  789.5833
+|   |   |   |--- numeric__site_events_previous_1h <= 2.5000
+|   |   |   |   |--- numeric__altitude_ft_deviation_from_prior_mean <= -593.7500
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- numeric__altitude_ft_deviation_from_prior_mean >  -593.7500
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- numeric__site_events_previous_1h >  2.5000
+|   |   |   |   |--- class: 1
+|   |--- numeric__site_events_previous_7d >  324.5000
+|   |   |--- numeric__site_events_previous_7d <= 400.5000
+|   |   |   |--- numeric__site_events_previous_1h <= 3.5000
+|   |   |   |   |--- numeric__vertical_speed_fpm_deviation_from_prior_mean <= 1766.4000
+|   |   |   |   |   |--- class: 0
+|   |   |   |   |--- numeric__vertical_speed_fpm_deviation_from_prior_mean >  1766.4000
+|   |   |   |   |   |--- class: 0
+|   |   |   |--- numeric__site_events_previous_1h >  3.5000
+|   |   |   |   |--- numeric__site_events_previous_24h <= 51.5000
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- numeric__site_events_previous_24h >  51.5000
+|   |   |   |   |   |--- class: 0
+|   |   |--- numeric__site_events_previous_7d >  400.5000
+|   |   |   |--- numeric__site_events_previous_24h <= 53.0000
+|   |   |   |   |--- class: 0
+|   |   |   |--- numeric__site_events_previous_24h >  53.0000
+|   |   |   |   |--- numeric__site_events_previous_24h <= 62.0000
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- numeric__site_events_previous_24h >  62.0000
+|   |   |   |   |   |--- class: 1
+|--- numeric__site_events_previous_24h >  73.5000
+|   |--- numeric__site_events_previous_7d <= 293.5000
+|   |   |--- numeric__site_events_previous_7d <= 278.5000
+|   |   |   |--- numeric__site_events_previous_7d <= 253.5000
+|   |   |   |   |--- class: 0
+|   |   |   |--- numeric__site_events_previous_7d >  253.5000
+|   |   |   |   |--- class: 1
+|   |   |--- numeric__site_events_previous_7d >  278.5000
+|   |   |   |--- class: 0
+|   |--- numeric__site_events_previous_7d >  293.5000
+|   |   |--- numeric__site_events_previous_1h <= 2.5000
+|   |   |   |--- numeric__prior_mean_distance_miles <= 0.6015
+|   |   |   |   |--- class: 1
+|   |   |   |--- numeric__prior_mean_distance_miles >  0.6015
+|   |   |   |   |--- class: 0
+|   |   |--- numeric__site_events_previous_1h >  2.5000
+|   |   |   |--- numeric__site_events_previous_24h <= 84.5000
+|   |   |   |   |--- numeric__altitude_ft_deviation_from_prior_mean <= 11.8750
+|   |   |   |   |   |--- class: 1
+|   |   |   |   |--- numeric__altitude_ft_deviation_from_prior_mean >  11.8750
+|   |   |   |   |   |--- class: 1
+|   |   |   |--- numeric__site_events_previous_24h >  84.5000
+|   |   |   |   |--- class: 1

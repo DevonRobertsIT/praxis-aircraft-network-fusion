@@ -1,0 +1,411 @@
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Model family</th>
+      <th>Variant</th>
+      <th>Component type</th>
+      <th>Rank</th>
+      <th>Component</th>
+      <th>Importance metric</th>
+      <th>Importance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>1</td>
+      <td>numeric__nf3_byte_total_max</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001881</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>2</td>
+      <td>numeric__nf3_dst_ip_unique_count</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001733</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>3</td>
+      <td>numeric__nf3_first_flow_start_lag_s</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001478</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>4</td>
+      <td>numeric__nf3_iat_src_to_dst_iat_stddev_std</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001427</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>5</td>
+      <td>numeric__nf3_packet_total_mean</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001342</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>6</td>
+      <td>numeric__nf3_packet_total_max</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001205</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>7</td>
+      <td>numeric__nf3_post_event_flow_count</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001181</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>8</td>
+      <td>numeric__nf3_flow_count</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001104</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>1</td>
+      <td>numeric__dst_port</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000022</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>2</td>
+      <td>categorical__protocol_6</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000010</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>3</td>
+      <td>numeric__src_port</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000009</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>4</td>
+      <td>numeric__flow_duration_s</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000004</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>5</td>
+      <td>categorical__protocol_17</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000003</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>6</td>
+      <td>categorical__protocol_1</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>7</td>
+      <td>categorical__protocol_89</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>8</td>
+      <td>categorical__protocol_132</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>1</td>
+      <td>flow_overlaps_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.679692</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>2</td>
+      <td>episode_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.657303</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>3</td>
+      <td>site_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.654325</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>4</td>
+      <td>flow_post_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.604733</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>5</td>
+      <td>aircraft_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.599364</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>6</td>
+      <td>flow_pre_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.586340</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 0</td>
+      <td>1</td>
+      <td>flow_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.666147</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 0</td>
+      <td>2</td>
+      <td>site_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.650347</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 0</td>
+      <td>3</td>
+      <td>episode_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.637963</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 0</td>
+      <td>4</td>
+      <td>aircraft_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.591791</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>1</td>
+      <td>episode_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.697170</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>2</td>
+      <td>flow_post_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.652924</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>3</td>
+      <td>site_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.632119</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>4</td>
+      <td>flow_pre_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.626242</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>5</td>
+      <td>flow_overlaps_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.622807</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>6</td>
+      <td>aircraft_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.621806</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 1</td>
+      <td>1</td>
+      <td>episode_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.709724</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 1</td>
+      <td>2</td>
+      <td>site_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.664373</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 1</td>
+      <td>3</td>
+      <td>flow_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.644923</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 1</td>
+      <td>4</td>
+      <td>aircraft_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.624095</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>1</td>
+      <td>numeric__nf3_dst_ip_unique_count</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.040240</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>2</td>
+      <td>numeric__nf3_src_ip_unique_count</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.014829</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>3</td>
+      <td>numeric__nf3_byte_total_max</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.013795</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>4</td>
+      <td>numeric__nf3_packet_total_max</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.013306</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>5</td>
+      <td>numeric__nf3_packet_total_mean</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.010819</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>6</td>
+      <td>numeric__nf3_iat_src_to_dst_iat_stddev_std</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.008684</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>7</td>
+      <td>numeric__nf3_byte_total_sum</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.008541</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>8</td>
+      <td>numeric__episode_sequence_number</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.007199</td>
+    </tr>
+  </tbody>
+</table>

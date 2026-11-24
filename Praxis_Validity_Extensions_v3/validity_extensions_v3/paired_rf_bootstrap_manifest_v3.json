@@ -1,0 +1,22 @@
+{
+  "analysis_version": "paired_rf_bootstrap_final_v3",
+  "created_utc": "2026-09-03T22:04:49.532698+00:00",
+  "random_state": 42,
+  "bootstrap_repeats": 20000,
+  "comparison": "fused random forest minus cyber-only random forest",
+  "full_test_resampling": "paired event bootstrap stratified by class; positive and negative event counts are preserved in every replicate",
+  "matched_resampling": "paired bootstrap over matched-pair identifiers; both members of each sampled pair are retained together",
+  "confidence_interval": "two-sided percentile interval at 2.5% and 97.5%",
+  "thresholds": {
+    "cyber_random_forest": 0.6603572969503753,
+    "fused_random_forest": 0.6451147869472418,
+    "selection_data": "chronological validation partition",
+    "selection_policy": "maximize F1; tie by higher recall then lower threshold"
+  },
+  "inputs": {
+    "data/processed/point_event_v2/modeling_v4/baseline_test_predictions_v4.csv": "c7d76d390cf7753f33026b38e86139703a9e527e407bc20ed262a329d1d756f3",
+    "data/processed/point_event_v2/control_evaluations_v2_final/matched_flow_covered_event_pairs.csv": "8873192a21bd0ba73c8866ead4478c3095d853f00cda582ba42368bab978b17b",
+    "data/processed/point_event_v2/modeling_v4/baseline_thresholds_v4.json": "a10cadafba53a8badf374c2f215e8e76173a9c2584ec0aa109f88fb36104c341"
+  },
+  "interpretation_boundary": "Intervals quantify uncertainty for the frozen leakage-safe controlled-replay test events. They do not imply causal or site-coincident aircraft-cyber detection."
+}

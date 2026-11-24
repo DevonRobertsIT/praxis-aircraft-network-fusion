@@ -1,0 +1,98 @@
+{
+  "analysis_version": "validity_extensions_v3",
+  "created_utc": "2026-09-03T22:09:00.558312+00:00",
+  "completion": {
+    "proxy_ablations_and_physical_permutation": true,
+    "paired_rf_bootstrap": true,
+    "standardized_model_latency": true
+  },
+  "validation_checks": [
+    {
+      "check": "proxy_scenario_count",
+      "expected": 17,
+      "actual": 17,
+      "passed": true
+    },
+    {
+      "check": "proxy_feature_sets",
+      "expected": [
+        "cyber",
+        "fused",
+        "physical"
+      ],
+      "actual": [
+        "cyber",
+        "fused",
+        "physical"
+      ],
+      "passed": true
+    },
+    {
+      "check": "frozen_rf_probability_reproduction",
+      "expected": "<=1e-12",
+      "actual": 2.220446049250313e-16,
+      "passed": true
+    },
+    {
+      "check": "permutation_blocks_and_repeats",
+      "expected": "2 blocks x 1000",
+      "actual": [
+        {
+          "block": "physical_features",
+          "repeats": 1000
+        },
+        {
+          "block": "cyber_features_negative_control",
+          "repeats": 1000
+        }
+      ],
+      "passed": true
+    },
+    {
+      "check": "paired_bootstrap_repeats",
+      "expected": "20000 per dataset",
+      "actual": [
+        20000
+      ],
+      "passed": true
+    },
+    {
+      "check": "latency_model_boundary_rows",
+      "expected": 12,
+      "actual": 12,
+      "passed": true
+    },
+    {
+      "check": "latency_common_event_count",
+      "expected": 200,
+      "actual": [
+        200
+      ],
+      "passed": true
+    },
+    {
+      "check": "latency_probability_reproduction",
+      "expected": "<=1e-5",
+      "actual": 1.1920928955078125e-07,
+      "passed": true
+    },
+    {
+      "check": "all_raw_to_score_p95_under_500ms",
+      "expected": true,
+      "actual": true,
+      "passed": true
+    }
+  ],
+  "headline_results": {
+    "cyber_rf_broad_flow_block_removed_auprc": 0.942087217246384,
+    "fused_rf_broad_flow_block_removed_auprc": 0.940829710370943,
+    "fused_rf_all_proxy_groups_removed_auprc": 0.9375103065933548,
+    "physical_block_permutation_mean_auprc": 1.0,
+    "cyber_block_permutation_mean_auprc": 0.5002879201213078,
+    "full_test_fused_minus_cyber_brier": 0.0025716332931689,
+    "matched_fused_minus_cyber_brier": 0.0032097665813271,
+    "maximum_raw_to_score_p95_ms": 11.280272149999998
+  },
+  "report": "NF3_PROXY_ABLATION_RF_BOOTSTRAP_LATENCY_REPORT_v3.md",
+  "chapter_insert": "chapter4_validity_extension_text_v3.md"
+}

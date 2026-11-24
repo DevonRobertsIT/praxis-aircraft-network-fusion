@@ -1,0 +1,9 @@
+split_mask,source_flow_rows,split_membership
+0,768089,unused
+1,731944,train
+2,190695,validation
+3,204966,train|validation
+4,196470,test
+5,167858,train|test
+6,28146,validation|test
+7,77256,train|validation|test

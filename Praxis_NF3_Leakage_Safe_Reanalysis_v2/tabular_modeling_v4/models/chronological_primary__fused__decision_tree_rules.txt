@@ -1,0 +1,16 @@
+|--- numeric__nf3_dst_ip_unique_count <= 21.5000
+|   |--- numeric__nf3_iat_dst_to_src_iat_avg_std <= 285.9683
+|   |   |--- numeric__recurrence_24h_flag <= 0.5000
+|   |   |   |--- class: 0
+|   |   |--- numeric__recurrence_24h_flag >  0.5000
+|   |   |   |--- class: 0
+|   |--- numeric__nf3_iat_dst_to_src_iat_avg_std >  285.9683
+|   |   |--- class: 0
+|--- numeric__nf3_dst_ip_unique_count >  21.5000
+|   |--- numeric__nf3_byte_total_max <= 1120208.0000
+|   |   |--- numeric__nf3_iat_dst_to_src_iat_min_std <= 0.1464
+|   |   |   |--- class: 1
+|   |   |--- numeric__nf3_iat_dst_to_src_iat_min_std >  0.1464
+|   |   |   |--- class: 1
+|   |--- numeric__nf3_byte_total_max >  1120208.0000
+|   |   |--- class: 1

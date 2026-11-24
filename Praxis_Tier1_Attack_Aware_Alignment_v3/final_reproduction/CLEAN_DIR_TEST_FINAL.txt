@@ -1,0 +1,17 @@
+Clean-directory reproduction tests (23 September 2026)
+
+Covered:
+1. Final neural tables (Tables 4.12 intensity and regime rows, 4.13, 4.14) from final_neural_test_predictions_v33.csv alone
+   (code/41_reproduce_final_neural_tables_v33.py, empty directory, 400 bootstrap resamples, seed 42):
+   every deterministic quantity (per-run AUPRC, paired differences, seed means, SDs, t-intervals, p-values, seeds positive)
+   matched the saved results to <= 1.2e-15; bin-cluster CI counts matched for H2' and H4 in both kappa settings and differed
+   by one seed for H3' (kappa 0: +1; kappa 1: -1) and event-only minus Transformer (kappa 0: +1 below zero; kappa 1: -1) -
+   Monte Carlo variation; no decision depends on those counts.
+2. Coupling-grid corrections (Tables 4.8, 4.8b, 4.9) from review_corrections_v31/coupling_grid_test_predictions_v3.csv
+   (code/40_review_corrections_v31.py): all numeric outputs reproduced with zero difference (see review_corrections_v31/CLEAN_DIR_TEST.txt).
+3. Package integrity: SHA256SUMS_package.txt (which excludes itself) verified with sha256sum -c after extraction to an empty directory.
+4. Portability: code/export_final_neural_predictions_v33.py (all paths as arguments) regenerated a byte-identical prediction file in an empty directory; code/40_ ran to completion with tabulate unavailable (plain-text Markdown fallback).
+5. Static check of the final entry point: rgcn_ablation/run_rgcn_v33_normalization_rerun.ps1 references only _v33 staging and output
+   folders and names notebook 06 v3.3 and notebook 09 v3.3 explicitly.
+
+Not covered (require the original data and/or PyTorch): alignment from raw data, model training, and execution of the explanation notebooks.

@@ -1,0 +1,10 @@
+model,evidence_type,repeat_index,noise_std,top_k,top_k_jaccard,spearman_rank_correlation,evaluation_rows
+Temporal Transformer,transformed_feature,1,0.01,10,1.0,0.9998378801431128,96
+Temporal Transformer,transformed_feature,2,0.01,10,1.0,0.9997987477638641,96
+Temporal Transformer,transformed_feature,3,0.01,10,0.8181818181818182,0.9996981216457963,96
+R-GCN,event_transformed_feature,1,0.01,10,1.0,0.9994409660107336,96
+R-GCN,flow_transformed_feature,1,0.01,10,0.42857142857142855,0.3118046856039075,96
+R-GCN,event_transformed_feature,2,0.01,10,0.8181818181818182,0.9996533989266548,96
+R-GCN,flow_transformed_feature,2,0.01,10,0.42857142857142855,0.35475718247778787,96
+R-GCN,event_transformed_feature,3,0.01,10,0.8181818181818182,0.9997484347048303,96
+R-GCN,flow_transformed_feature,3,0.01,10,0.42857142857142855,0.31677930494798695,96

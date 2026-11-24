@@ -1,0 +1,17 @@
+artifact,artifact_role
+selected_event_flow_edges_v2.csv,"Label-blind, bounded event-to-flow edge sample used by the R-GCN."
+rgcn_node_manifest_v2.csv,Stable graph node index for point-event and selected flow nodes.
+rgcn_relation_statistics_v2.csv,"Per-variant relation counts, weight statistics, and node coverage."
+rgcn_results_v2.csv,"Validation/test metrics, thresholds, training time, and latency for both R-GCN variants."
+rgcn_predictions_v2.csv,Event-level validation and test probabilities for both R-GCN variants.
+rgcn_thresholds_v2.json,Validation F1 threshold-selection results.
+rgcn_training_history_v2.csv,"Per-epoch training loss, validation loss, and validation AUPRC."
+rgcn_latency_v2.csv,Prepared local causal-subgraph inference latency samples.
+rgcn_relation_weight_norms_v2.csv,Learned relation-transformation Frobenius norms by layer.
+rgcn_feature_attribution_v2.csv,Gradient-times-input diagnostic feature attribution.
+rgcn_vs_transformer_v2.csv,R-GCN comparisons with the frozen Transformer and lag/relation ablation.
+rgcn_hypothesis_evaluation_v2.csv,Explicit H2 and H3 decision table.
+rgcn_graph_manifest_v2.json,"Frozen node, edge, relation, and feature construction policy."
+rgcn_reference_v2.json,Frozen R-GCN performance reference.
+rgcn_config_v2.json,"Frozen architecture, graph policy, and hypothesis criteria."
+rgcn_build_summary_v2.json,"Build metadata, environment, provenance, and regression checks."

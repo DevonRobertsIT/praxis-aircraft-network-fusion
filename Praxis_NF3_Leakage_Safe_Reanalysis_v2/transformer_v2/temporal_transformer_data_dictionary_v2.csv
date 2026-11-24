@@ -1,0 +1,13 @@
+artifact,artifact_role
+temporal_transformer_results_v2.csv,"Transformer validation/test metrics, selected threshold, training time, and latency."
+temporal_transformer_predictions_v2.csv,Event-level validation and test probabilities and predicted labels.
+temporal_transformer_thresholds_v2.json,Validation threshold-selection policy and value for each feature set.
+temporal_transformer_training_history_v2.csv,"Per-epoch training loss, validation loss, and validation AUPRC."
+temporal_transformer_latency_v2.csv,End-to-end raw-sequence preprocessing and model-forward latency.
+temporal_transformer_sequence_manifest_v2.csv,Event-level backward-looking sequence boundaries and available context.
+temporal_transformer_feature_attribution_v2.csv,Gradient-times-input diagnostic attribution for transformed fused features.
+temporal_transformer_attention_summary_v2.csv,Final-layer final-token attention summarized by temporal position and target class.
+transformer_vs_tabular_v2.csv,Primary Transformer test AUPRC compared with the best Notebook 04 fused tabular baseline.
+transformer_reference_v2.json,Frozen Transformer performance reference for the later R-GCN hypothesis test.
+temporal_transformer_config_v2.json,"Frozen architecture, sequence policy, feature sets, device, and time-gap scaling."
+temporal_transformer_build_summary_v2.json,"Build metadata, provenance, environment, output counts, and regression checks."

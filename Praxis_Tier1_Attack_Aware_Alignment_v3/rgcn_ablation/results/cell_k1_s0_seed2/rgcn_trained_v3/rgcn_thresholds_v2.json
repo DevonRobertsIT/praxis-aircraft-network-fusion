@@ -1,0 +1,20 @@
+[
+  {
+    "variant": "full_lag_relation",
+    "policy": "maximum_validation_f1",
+    "selected_threshold": 0.2301013022661209,
+    "validation_f1_at_threshold": 0.8721251149954001
+  },
+  {
+    "variant": "lag_relation_ablation",
+    "policy": "maximum_validation_f1",
+    "selected_threshold": 0.6470406651496887,
+    "validation_f1_at_threshold": 0.8841911764705882
+  },
+  {
+    "variant": "event_only_self_loop",
+    "policy": "maximum_validation_f1",
+    "selected_threshold": 0.30708518624305725,
+    "validation_f1_at_threshold": 0.9048473967684022
+  }
+]

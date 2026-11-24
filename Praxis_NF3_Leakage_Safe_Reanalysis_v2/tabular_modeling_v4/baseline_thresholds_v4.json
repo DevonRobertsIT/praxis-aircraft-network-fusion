@@ -1,0 +1,114 @@
+{
+  "chronological_primary__physical__dummy_prior": {
+    "selected_threshold": 0.6046429827646852,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.6046429827646852,
+    "validation_f1": 0.6748822036969916,
+    "validation_precision": 0.5092997811816192,
+    "validation_recall": 1.0
+  },
+  "chronological_primary__physical__logistic_regression": {
+    "selected_threshold": 0.41804401217829856,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.41804401217829856,
+    "validation_f1": 0.6753812636165578,
+    "validation_precision": 0.510148107515085,
+    "validation_recall": 0.9989258861439313
+  },
+  "chronological_primary__physical__decision_tree": {
+    "selected_threshold": 0.2115142605116141,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.2115142605116141,
+    "validation_f1": 0.6748911465892597,
+    "validation_precision": 0.5095890410958904,
+    "validation_recall": 0.9989258861439313
+  },
+  "chronological_primary__physical__random_forest": {
+    "selected_threshold": 0.36839459563918436,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.36839459563918436,
+    "validation_f1": 0.6748822036969916,
+    "validation_precision": 0.5092997811816192,
+    "validation_recall": 1.0
+  },
+  "chronological_primary__cyber__dummy_prior": {
+    "selected_threshold": 0.6046429827646852,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.6046429827646852,
+    "validation_f1": 0.6748822036969916,
+    "validation_precision": 0.5092997811816192,
+    "validation_recall": 1.0
+  },
+  "chronological_primary__cyber__logistic_regression": {
+    "selected_threshold": 0.6433695879441862,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.6433695879441862,
+    "validation_f1": 0.9994632313472893,
+    "validation_precision": 0.9989270386266095,
+    "validation_recall": 1.0
+  },
+  "chronological_primary__cyber__decision_tree": {
+    "selected_threshold": 0.7234111021721643,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.7234111021721643,
+    "validation_f1": 1.0,
+    "validation_precision": 1.0,
+    "validation_recall": 1.0
+  },
+  "chronological_primary__cyber__random_forest": {
+    "selected_threshold": 0.6603572969503753,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.6603572969503753,
+    "validation_f1": 1.0,
+    "validation_precision": 1.0,
+    "validation_recall": 1.0
+  },
+  "chronological_primary__fused__dummy_prior": {
+    "selected_threshold": 0.6046429827646852,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.6046429827646852,
+    "validation_f1": 0.6748822036969916,
+    "validation_precision": 0.5092997811816192,
+    "validation_recall": 1.0
+  },
+  "chronological_primary__fused__logistic_regression": {
+    "selected_threshold": 0.6257567908734735,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.6257567908734735,
+    "validation_f1": 1.0,
+    "validation_precision": 1.0,
+    "validation_recall": 1.0
+  },
+  "chronological_primary__fused__decision_tree": {
+    "selected_threshold": 1.0,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 1.0,
+    "validation_f1": 1.0,
+    "validation_precision": 1.0,
+    "validation_recall": 1.0
+  },
+  "chronological_primary__fused__random_forest": {
+    "selected_threshold": 0.6451147869472418,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.6451147869472418,
+    "validation_f1": 1.0,
+    "validation_precision": 1.0,
+    "validation_recall": 1.0
+  },
+  "aircraft_group_sensitivity__fused__logistic_regression": {
+    "selected_threshold": 0.15143527171239918,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.15143527171239918,
+    "validation_f1": 0.9994472084024323,
+    "validation_precision": 0.9988950276243094,
+    "validation_recall": 1.0
+  },
+  "aircraft_group_sensitivity__fused__random_forest": {
+    "selected_threshold": 0.7521526869653651,
+    "policy": "maximize_validation_f1_tie_higher_recall_then_lower_threshold",
+    "threshold": 0.7521526869653651,
+    "validation_f1": 1.0,
+    "validation_precision": 1.0,
+    "validation_recall": 1.0
+  }
+}

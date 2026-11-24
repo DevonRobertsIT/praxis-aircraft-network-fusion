@@ -1,0 +1,59 @@
+Loading NF3 from the recovery archive...
+Loaded 2,365,424 NF3 flows.
+S1: {"regime_intervals": [{"interval_index": 0, "regime": "attack", "start_utc": "2015-01-22 11:49:36.907000+00:00", "end_utc": "2015-01-22 13:49:29.907000+00:00", "duration_s": 7193.0, "assigned": {"test": 7193.0}}, {"interval_index": 1, "regime": "benign", "start_utc": "2015-01-22 13:49:29.907000+00:00", "end_utc": "2015-01-23 00:25:24.907000+00:00", "duration_s": 38155.0, "assigned": {"train": 26708.5, "validation": 5723.25, "test": 5723.25}}], "min_viable_block_s": 2040.0, "session_start_utc": "2015-01-22 11:49:36.907000+00:00", "session_end_utc": "2015-01-23 00:25:23.813000+00:00", "attack_wi
+S2: {"regime_intervals": [{"interval_index": 0, "regime": "attack", "start_utc": "2015-02-18 00:23:27.658000+00:00", "end_utc": "2015-02-18 00:28:06.658000+00:00", "duration_s": 279.0, "assigned": null, "reason": "shorter than minimum viable block (2040 s)"}, {"interval_index": 1, "regime": "benign", "start_utc": "2015-02-18 00:28:06.658000+00:00", "end_utc": "2015-02-18 00:35:39.658000+00:00", "duration_s": 453.0, "assigned": null, "reason": "shorter than minimum viable block (2040 s)"}, {"interval_index": 2, "regime": "attack", "start_utc": "2015-02-18 00:35:39.658000+00:00", "end_utc": "2015-02
+Aligned 1,000 / 12,185
+Aligned 2,000 / 12,185
+Aligned 3,000 / 12,185
+Aligned 4,000 / 12,185
+Aligned 5,000 / 12,185
+Aligned 6,000 / 12,185
+Aligned 7,000 / 12,185
+Aligned 8,000 / 12,185
+Aligned 9,000 / 12,185
+Aligned 10,000 / 12,185
+Aligned 11,000 / 12,185
+Aligned 12,000 / 12,185
+Aligned 12,185 / 12,185
+{
+  "outputs": {
+    "event_rows": 12185,
+    "blocks": 6,
+    "window_feature_rows": 12185,
+    "target_rows": 12185,
+    "primary_full_relationship_count": 78926756,
+    "primary_materialized_bounded_edge_rows": 193575,
+    "primary_events_with_flows": 12099,
+    "primary_positive_windows": 7094,
+    "primary_negative_windows": 5091,
+    "primary_prevalence": 0.5821912187115306,
+    "replay_cycles_by_split": {
+      "train": 362,
+      "validation": 339,
+      "test": 367
+    }
+  },
+  "session_indicator_baseline_test": {
+    "auprc": 0.5552516411378556,
+    "roc_auc": NaN,
+    "test_prevalence": 0.5552516411378556
+  },
+  "gate": {
+    "exact_source_flow_recurrence": true,
+    "mapped_source_window_overlap_free": true,
+    "both_classes_within_each_partition": true,
+    "session_indicator_not_perfect_within_any_partition": true,
+    "both_classes_within_each_session_partition_where_feasible": true,
+    "decision": "PASS"
+  }
+}
+chronological_split session  events  positives  negatives  prevalence  minority_events  both_classes_present  feasible_by_data
+               test      S1    1828       1015        813    0.555252              813                  True              True
+              train      S1    3566          0       3566    0.000000                0                 False              True
+              train      S2    4963       4963          0    1.000000                0                 False             False
+         validation      S1     712          0        712    0.000000                0                 False              True
+         validation      S2    1116       1116          0    1.000000                0                 False             False
+ partition  events  positives  negatives  both_classes_present  session_indicator_auprc  session_indicator_roc_auc sessions_present  independent_240s_source_bins_positive  independent_240s_source_bins_negative
+     train    8529       4963       3566                  True                 1.000000                        1.0            S1|S2                                    144                                    106
+validation    1828       1116        712                  True                 1.000000                        1.0            S1|S2                                     29                                     19
+      test    1828       1015        813                  True                 0.555252                        NaN               S1                                     28                                     21

@@ -1,0 +1,3 @@
+cell,kappa,sigma,seed,control,events,edges,threshold,train_spearman
+cell_k1_s0_seed0,1.0,0.0,0,False,7094,113504,0.0883982783434045,0.9999996248390908
+cell_k0.5_s120_seed2,0.5,120.0,2,False,7094,113504,0.0886376326074818,0.49069623386524597

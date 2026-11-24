@@ -1,0 +1,71 @@
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Model</th>
+      <th>Validation AUPRC</th>
+      <th>Test AUPRC</th>
+      <th>Test ROC-AUC</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>Balanced accuracy</th>
+      <th>Brier score</th>
+      <th>Threshold</th>
+      <th>p95 latency (ms)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fused tabular — decision_tree</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>2.904</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer — fused</td>
+      <td>0.9995</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>0.9989</td>
+      <td>0.9967</td>
+      <td>0.9978</td>
+      <td>0.9978</td>
+      <td>0.0015</td>
+      <td>0.3675</td>
+      <td>12.820</td>
+    </tr>
+    <tr>
+      <td>R-GCN — full lag/relation</td>
+      <td>0.9446</td>
+      <td>0.9179</td>
+      <td>0.9081</td>
+      <td>0.7831</td>
+      <td>0.8740</td>
+      <td>0.8261</td>
+      <td>0.8163</td>
+      <td>0.1389</td>
+      <td>0.4395</td>
+      <td>2.410</td>
+    </tr>
+    <tr>
+      <td>R-GCN — lag/relation ablation</td>
+      <td>0.9256</td>
+      <td>0.9060</td>
+      <td>0.8979</td>
+      <td>0.7335</td>
+      <td>0.9014</td>
+      <td>0.8088</td>
+      <td>0.7873</td>
+      <td>0.1682</td>
+      <td>0.4153</td>
+      <td>1.165</td>
+    </tr>
+  </tbody>
+</table>

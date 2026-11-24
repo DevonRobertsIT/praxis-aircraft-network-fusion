@@ -1,0 +1,21 @@
+model,event_id,measurement_type,latency_ms,local_event_nodes,local_flow_nodes
+Temporal Transformer,PEV1-66FB1CA8A4FBE3CF,local_forward_backward_attribution,13.701499963644892,,
+R-GCN,PEV1-66FB1CA8A4FBE3CF,local_subgraph_build_plus_forward_backward_attribution,21.387599990703166,7.0,48.0
+Temporal Transformer,PEV1-2330C97C7FE37953,local_forward_backward_attribution,5.595700000412762,,
+R-GCN,PEV1-2330C97C7FE37953,local_subgraph_build_plus_forward_backward_attribution,18.611099978443235,7.0,48.0
+Temporal Transformer,PEV1-C03B4A588648A277,local_forward_backward_attribution,5.357899994123727,,
+R-GCN,PEV1-C03B4A588648A277,local_subgraph_build_plus_forward_backward_attribution,19.29039997048676,7.0,48.0
+Temporal Transformer,PEV1-046060056A8F7549,local_forward_backward_attribution,5.708399985451251,,
+R-GCN,PEV1-046060056A8F7549,local_subgraph_build_plus_forward_backward_attribution,26.318899996113032,7.0,48.0
+Temporal Transformer,PEV1-DA30BEA59F9E364A,local_forward_backward_attribution,8.890600001905113,,
+R-GCN,PEV1-DA30BEA59F9E364A,local_subgraph_build_plus_forward_backward_attribution,26.294499984942377,6.0,48.0
+Temporal Transformer,PEV1-2E4E2F9448F2378E,local_forward_backward_attribution,24.3132000323385,,
+R-GCN,PEV1-2E4E2F9448F2378E,local_subgraph_build_plus_forward_backward_attribution,52.09780001314357,7.0,48.0
+Temporal Transformer,PEV1-1E5F6B1CDB088A23,local_forward_backward_attribution,10.264299984555691,,
+R-GCN,PEV1-1E5F6B1CDB088A23,local_subgraph_build_plus_forward_backward_attribution,35.59700003825128,6.0,48.0
+Temporal Transformer,PEV1-50A8F80B73195676,local_forward_backward_attribution,5.752000026404858,,
+R-GCN,PEV1-50A8F80B73195676,local_subgraph_build_plus_forward_backward_attribution,18.95579998381436,4.0,32.0
+Temporal Transformer,PEV1-5BE5DEAEB9C53D61,local_forward_backward_attribution,5.645699973683804,,
+R-GCN,PEV1-5BE5DEAEB9C53D61,local_subgraph_build_plus_forward_backward_attribution,20.206499961204827,7.0,48.0
+Temporal Transformer,PEV1-BF15C49C8AA859CC,local_forward_backward_attribution,6.388399982824922,,
+R-GCN,PEV1-BF15C49C8AA859CC,local_subgraph_build_plus_forward_backward_attribution,18.8888999982737,4.0,32.0

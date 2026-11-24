@@ -1,0 +1,54 @@
+\begin{table}
+\caption{Highest-ranked Transformer and R-GCN explanation components within each source and explanation method. Importance magnitudes are not compared across methods.}
+\label{tab:explainability-summary}
+\begin{tabular}{lllrlll}
+\toprule
+Model family & Variant & Component type & Rank & Component & Importance metric & Importance \\
+\midrule
+Rgcn & full lag relation & event node feature & 1 & numeric\_\_nf3\_byte\_total\_max & mean\_absolute\_gradient\_times\_input & 0.001881 \\
+Rgcn & full lag relation & event node feature & 2 & numeric\_\_nf3\_dst\_ip\_unique\_count & mean\_absolute\_gradient\_times\_input & 0.001733 \\
+Rgcn & full lag relation & event node feature & 3 & numeric\_\_nf3\_first\_flow\_start\_lag\_s & mean\_absolute\_gradient\_times\_input & 0.001478 \\
+Rgcn & full lag relation & event node feature & 4 & numeric\_\_nf3\_iat\_src\_to\_dst\_iat\_stddev\_std & mean\_absolute\_gradient\_times\_input & 0.001427 \\
+Rgcn & full lag relation & event node feature & 5 & numeric\_\_nf3\_packet\_total\_mean & mean\_absolute\_gradient\_times\_input & 0.001342 \\
+Rgcn & full lag relation & event node feature & 6 & numeric\_\_nf3\_packet\_total\_max & mean\_absolute\_gradient\_times\_input & 0.001205 \\
+Rgcn & full lag relation & event node feature & 7 & numeric\_\_nf3\_post\_event\_flow\_count & mean\_absolute\_gradient\_times\_input & 0.001181 \\
+Rgcn & full lag relation & event node feature & 8 & numeric\_\_nf3\_flow\_count & mean\_absolute\_gradient\_times\_input & 0.001104 \\
+Rgcn & full lag relation & flow node feature & 1 & numeric\_\_dst\_port & mean\_absolute\_gradient\_times\_input & 0.000022 \\
+Rgcn & full lag relation & flow node feature & 2 & categorical\_\_protocol\_6 & mean\_absolute\_gradient\_times\_input & 0.000010 \\
+Rgcn & full lag relation & flow node feature & 3 & numeric\_\_src\_port & mean\_absolute\_gradient\_times\_input & 0.000009 \\
+Rgcn & full lag relation & flow node feature & 4 & numeric\_\_flow\_duration\_s & mean\_absolute\_gradient\_times\_input & 0.000004 \\
+Rgcn & full lag relation & flow node feature & 5 & categorical\_\_protocol\_17 & mean\_absolute\_gradient\_times\_input & 0.000003 \\
+Rgcn & full lag relation & flow node feature & 6 & categorical\_\_protocol\_1 & mean\_absolute\_gradient\_times\_input & 0.000000 \\
+Rgcn & full lag relation & flow node feature & 7 & categorical\_\_protocol\_89 & mean\_absolute\_gradient\_times\_input & 0.000000 \\
+Rgcn & full lag relation & flow node feature & 8 & categorical\_\_protocol\_132 & mean\_absolute\_gradient\_times\_input & 0.000000 \\
+Rgcn & full lag relation & relation weight layer 0 & 1 & flow\_overlaps\_event\_to\_event & linear\_weight\_frobenius\_norm & 4.679692 \\
+Rgcn & full lag relation & relation weight layer 0 & 2 & episode\_previous\_event & linear\_weight\_frobenius\_norm & 4.657303 \\
+Rgcn & full lag relation & relation weight layer 0 & 3 & site\_previous\_event & linear\_weight\_frobenius\_norm & 4.654325 \\
+Rgcn & full lag relation & relation weight layer 0 & 4 & flow\_post\_event\_to\_event & linear\_weight\_frobenius\_norm & 4.604733 \\
+Rgcn & full lag relation & relation weight layer 0 & 5 & aircraft\_previous\_event & linear\_weight\_frobenius\_norm & 4.599364 \\
+Rgcn & full lag relation & relation weight layer 0 & 6 & flow\_pre\_event\_to\_event & linear\_weight\_frobenius\_norm & 4.586340 \\
+Rgcn & lag relation ablation & relation weight layer 0 & 1 & flow\_to\_event & linear\_weight\_frobenius\_norm & 4.666147 \\
+Rgcn & lag relation ablation & relation weight layer 0 & 2 & site\_previous\_event & linear\_weight\_frobenius\_norm & 4.650347 \\
+Rgcn & lag relation ablation & relation weight layer 0 & 3 & episode\_previous\_event & linear\_weight\_frobenius\_norm & 4.637963 \\
+Rgcn & lag relation ablation & relation weight layer 0 & 4 & aircraft\_previous\_event & linear\_weight\_frobenius\_norm & 4.591791 \\
+Rgcn & full lag relation & relation weight layer 1 & 1 & episode\_previous\_event & linear\_weight\_frobenius\_norm & 4.697170 \\
+Rgcn & full lag relation & relation weight layer 1 & 2 & flow\_post\_event\_to\_event & linear\_weight\_frobenius\_norm & 4.652924 \\
+Rgcn & full lag relation & relation weight layer 1 & 3 & site\_previous\_event & linear\_weight\_frobenius\_norm & 4.632119 \\
+Rgcn & full lag relation & relation weight layer 1 & 4 & flow\_pre\_event\_to\_event & linear\_weight\_frobenius\_norm & 4.626242 \\
+Rgcn & full lag relation & relation weight layer 1 & 5 & flow\_overlaps\_event\_to\_event & linear\_weight\_frobenius\_norm & 4.622807 \\
+Rgcn & full lag relation & relation weight layer 1 & 6 & aircraft\_previous\_event & linear\_weight\_frobenius\_norm & 4.621806 \\
+Rgcn & lag relation ablation & relation weight layer 1 & 1 & episode\_previous\_event & linear\_weight\_frobenius\_norm & 4.709724 \\
+Rgcn & lag relation ablation & relation weight layer 1 & 2 & site\_previous\_event & linear\_weight\_frobenius\_norm & 4.664373 \\
+Rgcn & lag relation ablation & relation weight layer 1 & 3 & flow\_to\_event & linear\_weight\_frobenius\_norm & 4.644923 \\
+Rgcn & lag relation ablation & relation weight layer 1 & 4 & aircraft\_previous\_event & linear\_weight\_frobenius\_norm & 4.624095 \\
+Temporal Transformer & fused & transformed feature & 1 & numeric\_\_nf3\_dst\_ip\_unique\_count & mean\_absolute\_gradient\_times\_input & 0.040240 \\
+Temporal Transformer & fused & transformed feature & 2 & numeric\_\_nf3\_src\_ip\_unique\_count & mean\_absolute\_gradient\_times\_input & 0.014829 \\
+Temporal Transformer & fused & transformed feature & 3 & numeric\_\_nf3\_byte\_total\_max & mean\_absolute\_gradient\_times\_input & 0.013795 \\
+Temporal Transformer & fused & transformed feature & 4 & numeric\_\_nf3\_packet\_total\_max & mean\_absolute\_gradient\_times\_input & 0.013306 \\
+Temporal Transformer & fused & transformed feature & 5 & numeric\_\_nf3\_packet\_total\_mean & mean\_absolute\_gradient\_times\_input & 0.010819 \\
+Temporal Transformer & fused & transformed feature & 6 & numeric\_\_nf3\_iat\_src\_to\_dst\_iat\_stddev\_std & mean\_absolute\_gradient\_times\_input & 0.008684 \\
+Temporal Transformer & fused & transformed feature & 7 & numeric\_\_nf3\_byte\_total\_sum & mean\_absolute\_gradient\_times\_input & 0.008541 \\
+Temporal Transformer & fused & transformed feature & 8 & numeric\_\_episode\_sequence\_number & mean\_absolute\_gradient\_times\_input & 0.007199 \\
+\bottomrule
+\end{tabular}
+\end{table}

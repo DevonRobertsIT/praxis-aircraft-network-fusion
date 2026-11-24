@@ -1,0 +1,115 @@
+{
+  "results_version": "results_v2",
+  "primary_model_selection": {
+    "tabular_model": "decision_tree",
+    "transformer_feature_set": "fused",
+    "rgcn_primary_variant": "full_lag_relation",
+    "rgcn_ablation_variant": "lag_relation_ablation"
+  },
+  "common_test_events": 1828,
+  "hypotheses": [
+    {
+      "hypothesis": "H1",
+      "research_question": "RQ1",
+      "criterion": "Event-time MAE reduction versus processing time >= 1.0 second",
+      "observed_value": 1.3716864998,
+      "required_value": 1.0,
+      "bootstrap_ci_lower_95": 1.3274415265,
+      "bootstrap_ci_upper_95": 1.4210155929,
+      "latency_value_ms": null,
+      "latency_limit_ms": null,
+      "supported": true
+    },
+    {
+      "hypothesis": "H2",
+      "research_question": "RQ2",
+      "criterion": "Full R-GCN test AUPRC - temporal Transformer test AUPRC >= 0.03",
+      "observed_value": -0.0820774788,
+      "required_value": 0.03,
+      "bootstrap_ci_lower_95": -0.0936356582,
+      "bootstrap_ci_upper_95": -0.0707465502,
+      "latency_value_ms": null,
+      "latency_limit_ms": null,
+      "supported": false
+    },
+    {
+      "hypothesis": "H3",
+      "research_question": "RQ3",
+      "criterion": "Full R-GCN test AUPRC - lag/relation ablation test AUPRC >= 0.05 and full local p95 latency <= 500 ms",
+      "observed_value": 0.011876973,
+      "required_value": 0.05,
+      "bootstrap_ci_lower_95": 0.006081923,
+      "bootstrap_ci_upper_95": 0.0176163468,
+      "latency_value_ms": 2.4096937501,
+      "latency_limit_ms": 500.0,
+      "supported": false
+    }
+  ],
+  "model_results": [
+    {
+      "model_key": "tabular_fused_best",
+      "model_label": "Fused tabular \u2014 decision_tree",
+      "model_family": "tabular",
+      "validation_auprc": 1.0,
+      "test_auprc": 1.0,
+      "test_roc_auc": 1.0,
+      "test_precision": 1.0,
+      "test_recall": 1.0,
+      "test_f1": 1.0,
+      "test_balanced_accuracy": 1.0,
+      "test_brier_score": 0.0,
+      "selected_threshold": 1.0,
+      "p95_latency_ms": 2.90377185,
+      "latency_measurement": "single_event_predict_proba"
+    },
+    {
+      "model_key": "temporal_transformer_fused",
+      "model_label": "Temporal Transformer \u2014 fused",
+      "model_family": "temporal_transformer",
+      "validation_auprc": 0.9994617401,
+      "test_auprc": 0.999996401,
+      "test_roc_auc": 0.9999964089,
+      "test_precision": 0.9989023052,
+      "test_recall": 0.9967141292,
+      "test_f1": 0.9978070175,
+      "test_balanced_accuracy": 0.9978106165,
+      "test_brier_score": 0.001543118,
+      "selected_threshold": 0.3674864173,
+      "p95_latency_ms": 12.8202233499,
+      "latency_measurement": "raw_sequence_preprocessing_plus_forward"
+    },
+    {
+      "model_key": "rgcn_full_lag_relation",
+      "model_label": "R-GCN \u2014 full lag/relation",
+      "model_family": "rgcn",
+      "validation_auprc": 0.9446409217,
+      "test_auprc": 0.9179189222,
+      "test_roc_auc": 0.9080518796,
+      "test_precision": 0.7831207066,
+      "test_recall": 0.874041621,
+      "test_f1": 0.8260869565,
+      "test_balanced_accuracy": 0.8162557832,
+      "test_brier_score": 0.1388536647,
+      "selected_threshold": 0.4395342171,
+      "p95_latency_ms": 2.4096937501,
+      "latency_measurement": "prepared_local_causal_subgraph_forward"
+    },
+    {
+      "model_key": "rgcn_lag_relation_ablation",
+      "model_label": "R-GCN \u2014 lag/relation ablation",
+      "model_family": "rgcn",
+      "validation_auprc": 0.9255997194,
+      "test_auprc": 0.9060419492,
+      "test_roc_auc": 0.8978938107,
+      "test_precision": 0.7335115865,
+      "test_recall": 0.9014238773,
+      "test_f1": 0.8088452088,
+      "test_balanced_accuracy": 0.7873239605,
+      "test_brier_score": 0.168238906,
+      "selected_threshold": 0.415274322,
+      "p95_latency_ms": 1.1651870001,
+      "latency_measurement": "prepared_local_causal_subgraph_forward"
+    }
+  ],
+  "interpretation": "Controlled cross-domain alignment performance; not evidence of causal or site-coincident aircraft/cyber incidents."
+}

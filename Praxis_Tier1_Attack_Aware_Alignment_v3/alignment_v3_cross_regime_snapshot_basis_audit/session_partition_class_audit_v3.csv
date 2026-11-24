@@ -1,0 +1,6 @@
+chronological_split,session,events,positives,negatives,prevalence,minority_events,both_classes_present,feasible_by_data
+test,S1,1828,1015,813,0.5552516411378556,813,True,True
+train,S1,3566,0,3566,0.0,0,False,True
+train,S2,4963,4963,0,1.0,0,False,False
+validation,S1,712,0,712,0.0,0,False,True
+validation,S2,1116,1116,0,1.0,0,False,False

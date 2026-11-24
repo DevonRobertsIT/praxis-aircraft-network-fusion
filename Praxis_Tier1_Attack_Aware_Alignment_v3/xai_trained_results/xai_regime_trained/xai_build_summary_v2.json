@@ -1,0 +1,55 @@
+{
+  "model_version": "xai_validation_v2",
+  "created_utc": "2026-09-23T20:14:23.798766+00:00",
+  "inputs": {
+    "point_events": 12185,
+    "test_events": 1828,
+    "selected_flow_edges": 193568,
+    "selected_flow_nodes": 175234,
+    "sha256": {
+      "data\\processed\\point_event_v2\\nf3_alignment_v2\\candidate_point_events_v2_with_context_and_nf3_primary.csv": "0a4c886a50e0777539aff6972065ddcd8dbd6c51c43230a5e88de08ca91a25a6",
+      "data\\processed\\point_event_v2\\modeling_v4\\model_split_assignments_v4.csv": "4b367861f757f49165184c193dbb4ac56ead0d5e7940dd2feb43931d17630c3d",
+      "data\\processed\\point_event_v2\\modeling_v4\\feature_manifest_v4.json": "703915f5d8f01e77f8d13a32b1f4e70d309bfadd38c17e7f69e048542d802713",
+      "data\\processed\\point_event_v2\\modeling_v4\\model_target_definition_v4.json": "b1eb81f256075a25d65668d0bae0c987c824a7fba17e9c75d8213654c780574f",
+      "data\\processed\\point_event_v2\\transformer_v2\\models\\fused_temporal_transformer.pt": "10440fad157bf3177ca3b95f9821dd738cb9521a3835e188c143a31fd2f2b31f",
+      "data\\processed\\point_event_v2\\transformer_v2\\temporal_transformer_predictions_v2.csv": "f5680d3ee6fd42496fc6e88651c2b6e722e11b4886790538c152c769bd28f832",
+      "data\\processed\\point_event_v2\\transformer_v2\\temporal_transformer_feature_attribution_v2.csv": "a14ce4fb29ae07e40e84cc433ec519e3a11de25c81c90bb8b714deccde6f4569",
+      "data\\processed\\point_event_v2\\transformer_v2\\temporal_transformer_attention_summary_v2.csv": "28c13aae8b1ba9faffe348940adcc492ebf1693eef8a6cc33cb0d7714674bed5",
+      "data\\processed\\point_event_v2\\rgcn_leakage_safe_v2\\models\\full_lag_relation_rgcn.pt": "263354eaa55ecb64890c2f21d834ff361c352eface3a86768fd2d1870af35218",
+      "data\\processed\\point_event_v2\\rgcn_leakage_safe_v2\\rgcn_predictions_v2.csv": "32baa0158adbed70e6341c2ad262efd8a8d158fef7a00119fc6742d1e3c62bbb",
+      "data\\processed\\point_event_v2\\rgcn_leakage_safe_v2\\rgcn_feature_attribution_v2.csv": "be0ba5bae202abb62257082c866f36d14c9572ec05e84d0f759e13d37ab246d3",
+      "data\\processed\\point_event_v2\\rgcn_leakage_safe_v2\\rgcn_relation_weight_norms_v2.csv": "d4a22f5b0c2a224a571669d44637d2a1d00ef5061d7eba03cc4158c4d4114901",
+      "data\\processed\\point_event_v2\\rgcn_leakage_safe_v2\\selected_event_flow_edges_v2.csv": "b6f2600f3effe669629c52adbaacc522fa2e9f72f135e7e223f088a2e1c24e46",
+      "data\\processed\\point_event_v2\\rgcn_leakage_safe_v2\\rgcn_node_manifest_v2.csv": "61ba4429b07f05c3aa94b9d078d77b0846dca89c889e22d812fe4a58d5470fee",
+      "data\\processed\\point_event_v2\\rgcn_leakage_safe_v2\\rgcn_graph_manifest_v2.json": "70bc3dc0b401b67498332884f4bc0b16ced8c6ef1e36cc00057c5257c4a1846c",
+      "data\\processed\\point_event_v2\\rgcn_leakage_safe_v2\\rgcn_config_v2.json": "90f21be9cd77def8aa9b0a500fa59a0237a3997f4e82ba0f9c9632dfcc85f7ea",
+      "data\\processed\\point_event_v2\\rgcn_leakage_safe_v2\\rgcn_results_v2.csv": "160bee230a64dae1b279835c4d47db6891f6397eff354e30b4a5f4d9b87d1c75"
+    }
+  },
+  "reproduction_checks": {
+    "transformer_max_abs_probability_error": 1.8917489796876907e-10,
+    "rgcn_max_abs_probability_error": 1.1102230246251565e-16
+  },
+  "outputs": {
+    "global_summary_rows": 97,
+    "fidelity_rows": 24,
+    "stability_rows": 9,
+    "relation_consistency_rows": 6,
+    "latency_samples": 20,
+    "provenance_checks": 8,
+    "analyst_cases": 5,
+    "analyst_cards": 5,
+    "figures": 8
+  },
+  "environment": {
+    "python": "3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)]",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "pandas": "2.2.3",
+    "numpy": "2.2.4",
+    "scikit_learn": "1.6.1",
+    "torch": "2.8.0+cpu",
+    "device": "cpu",
+    "cuda_available": false
+  },
+  "interpretation": "XAI outputs describe model influence. They do not establish causal linkage, real site coincidence, or proof that an aircraft generated the replayed network activity."
+}

@@ -1,0 +1,16 @@
+{
+  "alignment_dir": "/home/claude/work/v3_out/alignment_v3_cross_regime_snapshot_basis",
+  "feature_manifest": "tabular_modeling_v4/feature_manifest_v4.json",
+  "random_state": 42,
+  "target_basis_dir": "/home/claude/work/v3_out/alignment_v3_cross_regime",
+  "rows": {
+    "train": 8529,
+    "validation": 1828,
+    "test": 1828
+  },
+  "positives": {
+    "train": 4963,
+    "validation": 1116,
+    "test": 1015
+  }
+}

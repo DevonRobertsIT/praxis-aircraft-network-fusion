@@ -1,0 +1,13 @@
+artifact,artifact_role
+xai_global_summary_v2.csv,"Consolidated global Transformer and R-GCN feature, temporal, and relation diagnostics."
+xai_fidelity_results_v2.csv,Top-ranked versus random feature-removal and R-GCN relation-removal fidelity tests.
+xai_stability_results_v2.csv,Explanation ranking stability under small transformed-input perturbations.
+xai_relation_consistency_v2.csv,R-GCN relation norms compared with behavioral relation-removal effects.
+xai_explanation_latency_v2.csv,Summary of analyst-explanation latency for Transformer and R-GCN.
+xai_explanation_latency_samples_v2.csv,Per-event explanation latency measurements.
+xai_provenance_audit_v2.csv,Traceability audit from XAI evidence back to frozen event and flow identifiers.
+xai_model_comparison_matrix_v2.csv,"Comparison of explanation capabilities across tabular, Transformer, and R-GCN models."
+xai_case_studies_v2.csv,"Representative held-out analyst cases with local feature, relation, and provenance evidence."
+xai_reference_v2.json,Frozen XAI validation reference metrics and interpretation boundary.
+xai_config_v2.json,Notebook 09 evaluation configuration.
+xai_results_narrative_v2.md,Cautious narrative summary for Chapter 4/5 drafting.

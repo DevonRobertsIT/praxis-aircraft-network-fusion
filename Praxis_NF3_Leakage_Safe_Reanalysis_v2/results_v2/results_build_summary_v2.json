@@ -1,0 +1,153 @@
+{
+  "definitions": {
+    "results_version": "results_v2",
+    "random_state": 8499,
+    "bootstrap_iterations": 2000,
+    "bootstrap_policy": "paired stratified resampling of common held-out events",
+    "minimum_subgroup_rows": 25,
+    "primary_window_half_width_s": 120,
+    "hypothesis_criteria": {
+      "H1_required_mae_reduction_s": 1.0,
+      "H2_required_auprc_margin": 0.03,
+      "H3_required_auprc_gain": 0.05,
+      "H3_max_p95_latency_ms": 500.0
+    }
+  },
+  "interpretation": {
+    "site_coincident_claim": false,
+    "causal_claim": false,
+    "statement": "Controlled cross-domain alignment performance; not evidence of causal or site-coincident aircraft/cyber incidents."
+  },
+  "inputs": {
+    "event_rows": 12185,
+    "common_test_events": 1828,
+    "test_positives": 913,
+    "test_prevalence": 0.49945295404814005,
+    "input_sha256": {
+      "data/processed/point_event_v2/nf3_alignment_v2/candidate_point_events_v2_with_context_and_nf3_primary.csv": "a936fa22142607802aa8a5c2141ae4adaa3292eac6bcbe5dc4b51c9e39819f15",
+      "data/processed/point_event_v2/nf3_alignment_v2/event_nf3_window_features_v2.csv": "fb2d1f6b11af7ab3ded5ffc22db989b545b0df15447975cdb765a60f7fd63269",
+      "data/processed/point_event_v2/nf3_alignment_v2/event_nf3_targets_v2.csv": "32604331047385632bccd37e980b8f205879dcc9ce9e324dee34c7f7260544f7",
+      "data/processed/point_event_v2/modeling_v4/model_split_assignments_v4.csv": "21f95717ecf3c05c2f26c332bee80ac885adf62bf175d60715fb0387d8b4cd40",
+      "data/processed/point_event_v2/modeling_v4/baseline_model_results_v4.csv": "980ab4ccf06f6ae083bfd0a9390d1ec5c362f3c8395a1ccf54ba2998f86a5959",
+      "data/processed/point_event_v2/modeling_v4/baseline_test_predictions_v4.csv": "c7d76d390cf7753f33026b38e86139703a9e527e407bc20ed262a329d1d756f3",
+      "data/processed/point_event_v2/transformer_v2/temporal_transformer_results_v2.csv": "3bd76011a127641079397256214c40ae9e68a615c2abd34bcd8d4c2a2fa0cf17",
+      "data/processed/point_event_v2/transformer_v2/temporal_transformer_predictions_v2.csv": "31de4a6ac73385918fefdf2f166945548a8d288c3586ae42857cb1f36a16a01b",
+      "data/processed/point_event_v2/transformer_v2/transformer_reference_v2.json": "85bbcd3ee1d2d4c2000820000f6645866bf2f511cf90ad9ec3750227a9b1670e",
+      "data/processed/point_event_v2/rgcn_leakage_safe_v2/rgcn_results_v2.csv": "72a5bbf49b8daab29449a4571c42594f577fdf91e923e9bf759ef769e8cf9b87",
+      "data/processed/point_event_v2/rgcn_leakage_safe_v2/rgcn_predictions_v2.csv": "bee0f6badd36654ab5418f0d4a710dbec706b09178bacf15b76094adbb0a3c92",
+      "data/processed/point_event_v2/rgcn_leakage_safe_v2/rgcn_reference_v2.json": "362d23a294eb4af834ccede558c82f8398ec0192956e510754efa5c9fe7dabc4"
+    },
+    "alignment_mode": "point_event_nf3_alignment_leakage_safe_v2"
+  },
+  "outputs": {
+    "model_rows": 4,
+    "paired_prediction_rows": 7312,
+    "subgroup_rows": 20,
+    "explainability_rows": 370,
+    "figure_files": 5,
+    "hypotheses": [
+      {
+        "hypothesis": "H1",
+        "research_question": "RQ1",
+        "criterion": "Event-time MAE reduction versus processing time >= 1.0 second",
+        "observed_value": 1.3716864998,
+        "required_value": 1.0,
+        "bootstrap_ci_lower_95": 1.3274415265,
+        "bootstrap_ci_upper_95": 1.4210155929,
+        "latency_value_ms": null,
+        "latency_limit_ms": null,
+        "supported": true
+      },
+      {
+        "hypothesis": "H2",
+        "research_question": "RQ2",
+        "criterion": "Full R-GCN test AUPRC - temporal Transformer test AUPRC >= 0.03",
+        "observed_value": -0.0820774788,
+        "required_value": 0.03,
+        "bootstrap_ci_lower_95": -0.0936356582,
+        "bootstrap_ci_upper_95": -0.0707465502,
+        "latency_value_ms": null,
+        "latency_limit_ms": null,
+        "supported": false
+      },
+      {
+        "hypothesis": "H3",
+        "research_question": "RQ3",
+        "criterion": "Full R-GCN test AUPRC - lag/relation ablation test AUPRC >= 0.05 and full local p95 latency <= 500 ms",
+        "observed_value": 0.011876973,
+        "required_value": 0.05,
+        "bootstrap_ci_lower_95": 0.006081923,
+        "bootstrap_ci_upper_95": 0.0176163468,
+        "latency_value_ms": 2.4096937501,
+        "latency_limit_ms": 500.0,
+        "supported": false
+      }
+    ]
+  },
+  "environment": {
+    "created_utc": "2026-09-03T21:39:05.027473+00:00",
+    "python": "3.12.13 (main, Aug  7 2026, 02:25:39) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0"
+  },
+  "integrity_checks": [
+    {
+      "check": "fused_event_id_unique",
+      "expected": true,
+      "actual": true,
+      "match": true,
+      "severity": "error"
+    },
+    {
+      "check": "split_event_id_unique",
+      "expected": true,
+      "actual": true,
+      "match": true,
+      "severity": "error"
+    },
+    {
+      "check": "fused_rows_equal_split_rows",
+      "expected": 12185,
+      "actual": 12185,
+      "match": true,
+      "severity": "error"
+    },
+    {
+      "check": "fused_and_split_event_sets_equal",
+      "expected": true,
+      "actual": true,
+      "match": true,
+      "severity": "error"
+    },
+    {
+      "check": "chronological_split_values_valid",
+      "expected": [
+        "validation",
+        "test",
+        "train"
+      ],
+      "actual": [
+        "test",
+        "train",
+        "validation"
+      ],
+      "match": true,
+      "severity": "error"
+    },
+    {
+      "check": "model_target_binary",
+      "expected": [
+        0,
+        1
+      ],
+      "actual": [
+        0,
+        1
+      ],
+      "match": true,
+      "severity": "error"
+    }
+  ]
+}

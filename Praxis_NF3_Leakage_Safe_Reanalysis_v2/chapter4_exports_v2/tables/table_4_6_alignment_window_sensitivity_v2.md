@@ -1,0 +1,5 @@
+| Window | Events | Events with flows | Flow coverage | Positive targets | Target prevalence | Target changes vs. primary | Positive-set Jaccard | Boundary-truncated events |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ±120 s | 12,185 | 12,070 | 99.06% | 7,001 | 57.46% | 0 | 1.0000 | 0 |
+| ±300 s | 12,185 | 12,135 | 99.59% | 7,057 | 57.92% | 56 | 0.9921 | 0 |
+| ±600 s | 12,185 | 12,185 | 100.00% | 7,107 | 58.33% | 106 | 0.9851 | 0 |

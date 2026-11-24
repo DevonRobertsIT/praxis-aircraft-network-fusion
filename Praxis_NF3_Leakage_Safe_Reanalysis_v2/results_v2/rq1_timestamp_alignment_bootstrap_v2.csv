@@ -1,0 +1,2 @@
+comparison,point_mae_reduction_s,bootstrap_mean_reduction_s,bootstrap_ci_lower_95_s,bootstrap_ci_upper_95_s,probability_reduction_at_least_1s,bootstrap_iterations
+event_time_vs_processing_time,1.3716864997948297,1.3718361920393927,1.3274415264669674,1.421015592942142,1.0,2000

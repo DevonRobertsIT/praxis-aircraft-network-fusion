@@ -1,0 +1,55 @@
+### physical
+|--- numeric__site_events_previous_24h <= 92.50
+|   |--- numeric__site_events_previous_7d <= 276.50
+|   |   |--- numeric__site_events_previous_24h <= 80.50
+|   |   |   |--- numeric__altitude_ft_deviation_from_prior_mean <= -418.03
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- numeric__altitude_ft_deviation_from_prior_mean >  -418.03
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |--- numeric__site_events_previous_24h >  80.50
+|   |   |   |--- class: 1
+|   |--- numeric__site_events_previous_7d >  276.50
+|   |   |--- numeric__site_events_previous_1h <= 2.50
+|   |   |   |--- numeric__site_events_previous_24h <= 11.50
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- numeric__site_events_previous_24h >  11.50
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |--- numeric__site_events_previous_1h >  2.50
+|   |   |   |--- numeric__ground_speed_kt_deviation_from_prior_mean <= 5.28
+|   |   |   |   |--- truncated branch of depth 2
+|   |   |   |--- numeric__ground_speed_kt_deviation_from_prior_mean >  5.28
+|   |   |   |   |--- truncated branch of depth 2
+|--- numeric__site_events_previous_24h >  92.50
+|   |--- class: 0
+
+
+### cyber
+|--- numeric__nf3_dst_ip_unique_count <= 21.50
+|   |--- numeric__nf3_iat_src_to_dst_iat_max_mean <= 372.82
+|   |   |--- class: 0
+|   |--- numeric__nf3_iat_src_to_dst_iat_max_mean >  372.82
+|   |   |--- class: 0
+|--- numeric__nf3_dst_ip_unique_count >  21.50
+|   |--- numeric__nf3_protocol_unique_count <= 3.50
+|   |   |--- numeric__nf3_src_port_unique_count <= 4094.00
+|   |   |   |--- class: 1
+|   |   |--- numeric__nf3_src_port_unique_count >  4094.00
+|   |   |   |--- class: 1
+|   |--- numeric__nf3_protocol_unique_count >  3.50
+|   |   |--- class: 1
+
+
+### fused
+|--- numeric__nf3_dst_ip_unique_count <= 21.50
+|   |--- numeric__nf3_iat_src_to_dst_iat_max_std <= 1573.40
+|   |   |--- class: 0
+|   |--- numeric__nf3_iat_src_to_dst_iat_max_std >  1573.40
+|   |   |--- class: 0
+|--- numeric__nf3_dst_ip_unique_count >  21.50
+|   |--- numeric__nf3_protocol_unique_count <= 3.50
+|   |   |--- numeric__nf3_packet_total_mean <= 82.59
+|   |   |   |--- class: 1
+|   |   |--- numeric__nf3_packet_total_mean >  82.59
+|   |   |   |--- class: 1
+|   |--- numeric__nf3_protocol_unique_count >  3.50
+|   |   |--- class: 1

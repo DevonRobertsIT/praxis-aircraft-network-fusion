@@ -1,0 +1,12 @@
+variant,relation,edge_count,weight_min,weight_mean,weight_max,unique_source_nodes,unique_destination_nodes
+full_lag_relation,site_previous_event,7093,1.0,1.0,1.0,7093,7093
+full_lag_relation,aircraft_previous_event,5556,1.0,1.0,1.0,5556,5556
+full_lag_relation,episode_previous_event,6,1.0,1.0,1.0,6,6
+full_lag_relation,flow_overlaps_event_to_event,20753,0.5,0.5641997456550598,0.9004706144332886,4638,6298
+full_lag_relation,flow_post_event_to_event,56571,0.3990423083305359,0.5248440504074097,0.9997166991233826,12646,6928
+full_lag_relation,flow_pre_event_to_event,36180,0.43840429186820984,0.5015407204627991,0.6267683506011963,8060,6847
+lag_relation_ablation,site_previous_event,7093,1.0,1.0,1.0,7093,7093
+lag_relation_ablation,aircraft_previous_event,5556,1.0,1.0,1.0,5556,5556
+lag_relation_ablation,episode_previous_event,6,1.0,1.0,1.0,6,6
+lag_relation_ablation,flow_to_event,113504,1.0,1.0,1.0,25344,7094
+event_only_self_loop,event_self,7094,1.0,1.0,1.0,7094,7094

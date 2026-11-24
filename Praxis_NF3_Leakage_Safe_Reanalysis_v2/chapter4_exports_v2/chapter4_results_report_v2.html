@@ -1,0 +1,807 @@
+<!doctype html><html><head><meta charset='utf-8'>
+<title>Chapter 4 Results Exports</title>
+<style>body{font-family:Arial,sans-serif;max-width:1100px;margin:2rem auto;line-height:1.5;}table{border-collapse:collapse;width:100%;margin:1rem 0 2rem;}th,td{border:1px solid #bbb;padding:.45rem;text-align:left;}img{max-width:100%;height:auto;margin:1rem 0 2rem;}code{background:#f2f2f2;padding:.1rem .25rem;}</style></head><body>
+<h1>Chapter 4 Results Exports</h1>
+<p><strong>Interpretation boundary:</strong> Controlled cross-domain alignment performance; not evidence of causal or site-coincident aircraft/cyber incidents.</p>
+<h2>Table 4.1</h2>
+<p>Evaluation design, frozen sample counts, and interpretation boundary for the controlled cross-domain alignment experiment.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Design element</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Candidate low-altitude point events</td>
+      <td>12,185</td>
+    </tr>
+    <tr>
+      <td>Common held-out events</td>
+      <td>1,828</td>
+    </tr>
+    <tr>
+      <td>Positive held-out events</td>
+      <td>913</td>
+    </tr>
+    <tr>
+      <td>Held-out target prevalence</td>
+      <td>49.95%</td>
+    </tr>
+    <tr>
+      <td>Primary temporal window</td>
+      <td>±120 seconds</td>
+    </tr>
+    <tr>
+      <td>Alignment mode</td>
+      <td>point event nf3 alignment leakage safe v2</td>
+    </tr>
+    <tr>
+      <td>Paired bootstrap iterations</td>
+      <td>2,000</td>
+    </tr>
+    <tr>
+      <td>Minimum subgroup rows</td>
+      <td>25</td>
+    </tr>
+    <tr>
+      <td>Interpretation boundary</td>
+      <td>Controlled cross-domain alignment performance; not evidence of causal or site-coincident aircraft/cyber incidents.</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Table 4.2</h2>
+<p>Event-time and processing-time timestamp fidelity by event subset. The all-events row carries the paired-bootstrap uncertainty interval used for H1.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Subset</th>
+      <th>n</th>
+      <th>Event-time MAE (s)</th>
+      <th>Processing-time MAE (s)</th>
+      <th>MAE reduction (s)</th>
+      <th>Reduction 95% CI (s)</th>
+      <th>Processing-time median AE (s)</th>
+      <th>Processing-time p95 AE (s)</th>
+      <th>H1 decision</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>All Events</td>
+      <td>12,185</td>
+      <td>0.000</td>
+      <td>1.372</td>
+      <td>1.372</td>
+      <td>[1.327, 1.421]</td>
+      <td>1.000</td>
+      <td>3.000</td>
+      <td>Supported</td>
+    </tr>
+    <tr>
+      <td>Non Stale Events</td>
+      <td>12,161</td>
+      <td>0.000</td>
+      <td>1.277</td>
+      <td>1.277</td>
+      <td>—</td>
+      <td>1.000</td>
+      <td>3.000</td>
+      <td>Descriptive</td>
+    </tr>
+    <tr>
+      <td>Stale Events</td>
+      <td>24</td>
+      <td>0.000</td>
+      <td>49.500</td>
+      <td>49.500</td>
+      <td>—</td>
+      <td>40.000</td>
+      <td>89.500</td>
+      <td>Descriptive</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Table 4.3</h2>
+<p>Frozen validation and held-out performance for the selected fused tabular, temporal Transformer, full R-GCN, and R-GCN ablation models.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Validation AUPRC</th>
+      <th>Test AUPRC</th>
+      <th>Test ROC-AUC</th>
+      <th>Precision</th>
+      <th>Recall</th>
+      <th>F1</th>
+      <th>Balanced accuracy</th>
+      <th>Brier score</th>
+      <th>Threshold</th>
+      <th>p95 latency (ms)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Fused tabular — decision_tree</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>0.0000</td>
+      <td>1.0000</td>
+      <td>2.904</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer — fused</td>
+      <td>0.9995</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>0.9989</td>
+      <td>0.9967</td>
+      <td>0.9978</td>
+      <td>0.9978</td>
+      <td>0.0015</td>
+      <td>0.3675</td>
+      <td>12.820</td>
+    </tr>
+    <tr>
+      <td>R-GCN — full lag/relation</td>
+      <td>0.9446</td>
+      <td>0.9179</td>
+      <td>0.9081</td>
+      <td>0.7831</td>
+      <td>0.8740</td>
+      <td>0.8261</td>
+      <td>0.8163</td>
+      <td>0.1389</td>
+      <td>0.4395</td>
+      <td>2.410</td>
+    </tr>
+    <tr>
+      <td>R-GCN — lag/relation ablation</td>
+      <td>0.9256</td>
+      <td>0.9060</td>
+      <td>0.8979</td>
+      <td>0.7335</td>
+      <td>0.9014</td>
+      <td>0.8088</td>
+      <td>0.7873</td>
+      <td>0.1682</td>
+      <td>0.4153</td>
+      <td>1.165</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Table 4.4</h2>
+<p>Paired held-out AUPRC differences. Positive differences favor the left-hand model named in each comparison.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Comparison</th>
+      <th>AUPRC difference</th>
+      <th>95% CI</th>
+      <th>Required margin</th>
+      <th>P(difference &gt; 0)</th>
+      <th>P(meets required margin)</th>
+      <th>Point-margin result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>H2: full R-GCN minus temporal Transformer</td>
+      <td>-0.0821</td>
+      <td>[-0.0936, -0.0707]</td>
+      <td>0.0300</td>
+      <td>0.0%</td>
+      <td>0.0%</td>
+      <td>Fail</td>
+    </tr>
+    <tr>
+      <td>H3: full R-GCN minus lag/relation ablation</td>
+      <td>+0.0119</td>
+      <td>[+0.0061, +0.0176]</td>
+      <td>0.0500</td>
+      <td>100.0%</td>
+      <td>0.0%</td>
+      <td>Fail</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer minus strongest fused tabular baseline</td>
+      <td>-0.0000</td>
+      <td>[-0.0000, 0.0000]</td>
+      <td>0.0000</td>
+      <td>1.2%</td>
+      <td>34.8%</td>
+      <td>Fail</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Table 4.5</h2>
+<p>Consolidated H1–H3 point criteria, uncertainty intervals, and decisions.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Hypothesis</th>
+      <th>Research question</th>
+      <th>Criterion</th>
+      <th>Observed</th>
+      <th>Required</th>
+      <th>95% CI</th>
+      <th>Latency</th>
+      <th>Decision</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>H1</td>
+      <td>RQ1</td>
+      <td>Event-time MAE reduction versus processing time &gt;= 1.0 second</td>
+      <td>+1.3717</td>
+      <td>1.0000</td>
+      <td>[+1.3274, +1.4210]</td>
+      <td>—</td>
+      <td>Supported</td>
+    </tr>
+    <tr>
+      <td>H2</td>
+      <td>RQ2</td>
+      <td>Full R-GCN test AUPRC - temporal Transformer test AUPRC &gt;= 0.03</td>
+      <td>-0.0821</td>
+      <td>0.0300</td>
+      <td>[-0.0936, -0.0707]</td>
+      <td>—</td>
+      <td>Not supported</td>
+    </tr>
+    <tr>
+      <td>H3</td>
+      <td>RQ3</td>
+      <td>Full R-GCN test AUPRC - lag/relation ablation test AUPRC &gt;= 0.05 and full local p95 latency &lt;= 500 ms</td>
+      <td>+0.0119</td>
+      <td>0.0500</td>
+      <td>[+0.0061, +0.0176]</td>
+      <td>2.410 ms (limit 500.0 ms)</td>
+      <td>Not supported</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Table 4.6</h2>
+<p>Sensitivity of controlled flow coverage and binary targets to the temporal window. Models were not retrained for these descriptive window comparisons.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Window</th>
+      <th>Events</th>
+      <th>Events with flows</th>
+      <th>Flow coverage</th>
+      <th>Positive targets</th>
+      <th>Target prevalence</th>
+      <th>Target changes vs. primary</th>
+      <th>Positive-set Jaccard</th>
+      <th>Boundary-truncated events</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>±120 s</td>
+      <td>12,185</td>
+      <td>12,070</td>
+      <td>99.06%</td>
+      <td>7,001</td>
+      <td>57.46%</td>
+      <td>0</td>
+      <td>1.0000</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>±300 s</td>
+      <td>12,185</td>
+      <td>12,135</td>
+      <td>99.59%</td>
+      <td>7,057</td>
+      <td>57.92%</td>
+      <td>56</td>
+      <td>0.9921</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>±600 s</td>
+      <td>12,185</td>
+      <td>12,185</td>
+      <td>100.00%</td>
+      <td>7,107</td>
+      <td>58.33%</td>
+      <td>106</td>
+      <td>0.9851</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Table 4.7</h2>
+<p>Descriptive range of subgroup AUPRC values under each model&#x27;s frozen threshold. These summaries are diagnostic and are not additional hypothesis tests.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model</th>
+      <th>Reported subgroups</th>
+      <th>Minimum subgroup AUPRC</th>
+      <th>Median subgroup AUPRC</th>
+      <th>Maximum subgroup AUPRC</th>
+      <th>Lowest subgroup</th>
+      <th>Highest subgroup</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>R-GCN — full lag/relation</td>
+      <td>5</td>
+      <td>0.9169</td>
+      <td>0.9179</td>
+      <td>0.9183</td>
+      <td>recurrence_context: first_observed_event</td>
+      <td>recurrence_context: prior_event_present</td>
+    </tr>
+    <tr>
+      <td>R-GCN — lag/relation ablation</td>
+      <td>5</td>
+      <td>0.9057</td>
+      <td>0.9060</td>
+      <td>0.9123</td>
+      <td>source_type: ADSB</td>
+      <td>recurrence_context: first_observed_event</td>
+    </tr>
+    <tr>
+      <td>Fused tabular — decision_tree</td>
+      <td>5</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>source_type: ADSB</td>
+      <td>timestamp_freshness: non_stale</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer — fused</td>
+      <td>5</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>1.0000</td>
+      <td>recurrence_context: prior_event_present</td>
+      <td>recurrence_context: first_observed_event</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Table 4.8</h2>
+<p>Highest-ranked Transformer and R-GCN explanation components within each source and explanation method. Importance magnitudes are not compared across methods.</p>
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Model family</th>
+      <th>Variant</th>
+      <th>Component type</th>
+      <th>Rank</th>
+      <th>Component</th>
+      <th>Importance metric</th>
+      <th>Importance</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>1</td>
+      <td>numeric__nf3_byte_total_max</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001881</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>2</td>
+      <td>numeric__nf3_dst_ip_unique_count</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001733</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>3</td>
+      <td>numeric__nf3_first_flow_start_lag_s</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001478</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>4</td>
+      <td>numeric__nf3_iat_src_to_dst_iat_stddev_std</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001427</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>5</td>
+      <td>numeric__nf3_packet_total_mean</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001342</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>6</td>
+      <td>numeric__nf3_packet_total_max</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001205</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>7</td>
+      <td>numeric__nf3_post_event_flow_count</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001181</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>event node feature</td>
+      <td>8</td>
+      <td>numeric__nf3_flow_count</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.001104</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>1</td>
+      <td>numeric__dst_port</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000022</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>2</td>
+      <td>categorical__protocol_6</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000010</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>3</td>
+      <td>numeric__src_port</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000009</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>4</td>
+      <td>numeric__flow_duration_s</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000004</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>5</td>
+      <td>categorical__protocol_17</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000003</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>6</td>
+      <td>categorical__protocol_1</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>7</td>
+      <td>categorical__protocol_89</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>flow node feature</td>
+      <td>8</td>
+      <td>categorical__protocol_132</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>1</td>
+      <td>flow_overlaps_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.679692</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>2</td>
+      <td>episode_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.657303</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>3</td>
+      <td>site_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.654325</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>4</td>
+      <td>flow_post_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.604733</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>5</td>
+      <td>aircraft_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.599364</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 0</td>
+      <td>6</td>
+      <td>flow_pre_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.586340</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 0</td>
+      <td>1</td>
+      <td>flow_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.666147</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 0</td>
+      <td>2</td>
+      <td>site_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.650347</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 0</td>
+      <td>3</td>
+      <td>episode_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.637963</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 0</td>
+      <td>4</td>
+      <td>aircraft_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.591791</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>1</td>
+      <td>episode_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.697170</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>2</td>
+      <td>flow_post_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.652924</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>3</td>
+      <td>site_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.632119</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>4</td>
+      <td>flow_pre_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.626242</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>5</td>
+      <td>flow_overlaps_event_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.622807</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>full lag relation</td>
+      <td>relation weight layer 1</td>
+      <td>6</td>
+      <td>aircraft_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.621806</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 1</td>
+      <td>1</td>
+      <td>episode_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.709724</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 1</td>
+      <td>2</td>
+      <td>site_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.664373</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 1</td>
+      <td>3</td>
+      <td>flow_to_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.644923</td>
+    </tr>
+    <tr>
+      <td>Rgcn</td>
+      <td>lag relation ablation</td>
+      <td>relation weight layer 1</td>
+      <td>4</td>
+      <td>aircraft_previous_event</td>
+      <td>linear_weight_frobenius_norm</td>
+      <td>4.624095</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>1</td>
+      <td>numeric__nf3_dst_ip_unique_count</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.040240</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>2</td>
+      <td>numeric__nf3_src_ip_unique_count</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.014829</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>3</td>
+      <td>numeric__nf3_byte_total_max</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.013795</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>4</td>
+      <td>numeric__nf3_packet_total_max</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.013306</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>5</td>
+      <td>numeric__nf3_packet_total_mean</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.010819</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>6</td>
+      <td>numeric__nf3_iat_src_to_dst_iat_stddev_std</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.008684</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>7</td>
+      <td>numeric__nf3_byte_total_sum</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.008541</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer</td>
+      <td>fused</td>
+      <td>transformed feature</td>
+      <td>8</td>
+      <td>numeric__episode_sequence_number</td>
+      <td>mean_absolute_gradient_times_input</td>
+      <td>0.007199</td>
+    </tr>
+  </tbody>
+</table>
+<h2>Figure 4.1</h2>
+<img src='figures/figure_4_1_timestamp_alignment_mae.png' alt='Figure 4.1'>
+<h2>Figure 4.2</h2>
+<img src='figures/figure_4_2_model_test_auprc_ci.png' alt='Figure 4.2'>
+<h2>Figure 4.3</h2>
+<img src='figures/figure_4_3_model_p95_latency.png' alt='Figure 4.3'>
+<h2>Figure 4.4</h2>
+<img src='figures/figure_4_4_paired_auprc_differences.png' alt='Figure 4.4'>
+<h2>Figure 4.5</h2>
+<img src='figures/figure_4_5_alignment_window_sensitivity.png' alt='Figure 4.5'>
+<h2>Figure 4.6</h2>
+<img src='figures/figure_4_6_subgroup_auprc_ranges.png' alt='Figure 4.6'>
+<h2>Figure 4.7</h2>
+<img src='figures/figure_4_7_transformer_feature_attribution.png' alt='Figure 4.7'>
+<h2>Figure 4.8</h2>
+<img src='figures/figure_4_8_rgcn_event_feature_attribution.png' alt='Figure 4.8'>
+<h2>Figure 4.9</h2>
+<img src='figures/figure_4_9_rgcn_relation_diagnostics.png' alt='Figure 4.9'>
+</body></html>

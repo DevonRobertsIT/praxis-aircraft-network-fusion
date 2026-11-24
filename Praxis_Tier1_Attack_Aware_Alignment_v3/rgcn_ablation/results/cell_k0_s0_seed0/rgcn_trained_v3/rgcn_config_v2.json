@@ -1,0 +1,38 @@
+{
+  "model_version": "rgcn_leakage_safe_v2",
+  "random_state": 42,
+  "primary_variant": "full_lag_relation",
+  "ablation_variant": "lag_relation_ablation",
+  "training_configuration": {
+    "hidden_dim": 64,
+    "layer_count": 2,
+    "dropout": 0.15,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "maximum_epochs": 2000,
+    "early_stopping_patience": 100,
+    "gradient_clip_norm": 1.0
+  },
+  "device": "cpu",
+  "graph_policy": {
+    "event_nodes": 7094,
+    "selected_flow_nodes": 24944,
+    "maximum_flows_per_event": 16,
+    "selection_uses_labels": false,
+    "flow_to_event_only": true,
+    "event_to_flow_edges": false,
+    "event_event_edges_are_causal": true,
+    "full_flow_relations": [
+      "flow_pre_event_to_event",
+      "flow_overlaps_event_to_event",
+      "flow_post_event_to_event",
+      "flow_other_to_event"
+    ],
+    "lag_weight_scale_s": 120.0
+  },
+  "hypothesis_criteria": {
+    "H2_required_auprc_margin": 0.03,
+    "H3_required_auprc_gain": 0.05,
+    "H3_max_p95_latency_ms": 500.0
+  }
+}

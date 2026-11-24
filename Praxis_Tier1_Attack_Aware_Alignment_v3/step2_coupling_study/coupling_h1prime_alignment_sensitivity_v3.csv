@@ -1,0 +1,7 @@
+model,sigma,cyber_auprc_loss_vs_sigma0_at_kappa0,loss_ge_0_02
+random_forest,60.0,0.006566912578834572,False
+random_forest,120.0,-0.0029704582789819023,False
+random_forest,300.0,-0.039611578060992914,False
+logistic_regression,60.0,-0.01779562736426743,False
+logistic_regression,120.0,0.023010602182230833,True
+logistic_regression,300.0,0.10884422634015067,True

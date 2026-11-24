@@ -1,0 +1,3 @@
+interval_index,regime,start_utc,end_utc,duration_s,assigned,reason,session
+0,attack,2015-02-18 00:23:27.658000+00:00,2015-02-18 00:28:06.658000+00:00,279.0,,shorter than minimum viable block (2040 s),S2
+1,benign,2015-02-18 00:28:06.658000+00:00,2015-02-18 00:35:39.658000+00:00,453.0,,shorter than minimum viable block (2040 s),S2

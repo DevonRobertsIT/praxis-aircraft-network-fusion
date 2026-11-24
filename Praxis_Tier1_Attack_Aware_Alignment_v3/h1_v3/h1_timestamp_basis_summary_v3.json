@@ -1,0 +1,56 @@
+{
+  "hypothesis": "H1 (revised): processing-time alignment changes >=5% of targets and costs >=0.02 held-out AUPRC",
+  "design": "same block layout; event centers placed on snapshot_time_utc instead of aircraft_event_time_utc",
+  "label_change": {
+    "events": 12185,
+    "changed": 2,
+    "changed_fraction": 0.00016413623307345098,
+    "mean_abs_processing_lag_s": 1.3716864997948297,
+    "p95_abs_processing_lag_s": 3.0,
+    "max_abs_center_shift_s": 2300438.251,
+    "changed_events_mean_abs_lag_s": 6.0
+  },
+  "label_change_by_partition": [
+    {
+      "chronological_split_event": "test",
+      "events": 1828,
+      "changed": 0,
+      "mean_abs_lag_s": 1.7773522975929978,
+      "max_abs_shift_s": 25.0,
+      "changed_fraction": 0.0
+    },
+    {
+      "chronological_split_event": "train",
+      "events": 8529,
+      "changed": 1,
+      "mean_abs_lag_s": 1.2410599132371907,
+      "max_abs_shift_s": 2259303.251,
+      "changed_fraction": 0.00011724703951225231
+    },
+    {
+      "chronological_split_event": "validation",
+      "events": 1828,
+      "changed": 1,
+      "mean_abs_lag_s": 1.575492341356674,
+      "max_abs_shift_s": 2300438.251,
+      "changed_fraction": 0.0005470459518599562
+    }
+  ],
+  "auprc": {
+    "model": "random_forest",
+    "feature_set": "cyber",
+    "event_basis_auprc": 1.0,
+    "snapshot_basis_auprc_vs_event_target": 1.0,
+    "loss": 0.0,
+    "bin_cluster_ci_95": [
+      -1.1102230246251565e-16,
+      1.1102230246251565e-16
+    ],
+    "repeats": 1000
+  },
+  "decision": {
+    "H1a_label_change_supported": false,
+    "H1b_auprc_loss_supported": false,
+    "H1_supported": false
+  }
+}

@@ -1,0 +1,50 @@
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Subset</th>
+      <th>n</th>
+      <th>Event-time MAE (s)</th>
+      <th>Processing-time MAE (s)</th>
+      <th>MAE reduction (s)</th>
+      <th>Reduction 95% CI (s)</th>
+      <th>Processing-time median AE (s)</th>
+      <th>Processing-time p95 AE (s)</th>
+      <th>H1 decision</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>All Events</td>
+      <td>12,185</td>
+      <td>0.000</td>
+      <td>1.372</td>
+      <td>1.372</td>
+      <td>[1.327, 1.421]</td>
+      <td>1.000</td>
+      <td>3.000</td>
+      <td>Supported</td>
+    </tr>
+    <tr>
+      <td>Non Stale Events</td>
+      <td>12,161</td>
+      <td>0.000</td>
+      <td>1.277</td>
+      <td>1.277</td>
+      <td>—</td>
+      <td>1.000</td>
+      <td>3.000</td>
+      <td>Descriptive</td>
+    </tr>
+    <tr>
+      <td>Stale Events</td>
+      <td>24</td>
+      <td>0.000</td>
+      <td>49.500</td>
+      <td>49.500</td>
+      <td>—</td>
+      <td>40.000</td>
+      <td>89.500</td>
+      <td>Descriptive</td>
+    </tr>
+  </tbody>
+</table>

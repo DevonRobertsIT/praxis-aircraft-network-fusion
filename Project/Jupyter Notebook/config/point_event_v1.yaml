@@ -1,0 +1,77 @@
+definition:
+  name: candidate_low_altitude_point_event
+  version: point_event_v1
+  status: frozen
+  primary_modeling_unit: one_qualifying_aircraft_observation
+  description: >-
+    One deduplicated aircraft observation within one statute mile of PANC,
+    at 100 through 999 feet, with ground speed of at least 30 knots,
+    valid UTC timestamps and coordinates, and a usable aircraft or track identifier.
+
+paths:
+  raw_data_dir: data/fr24_raw_5min
+  output_dir: data/processed/point_event_v1
+
+study_site:
+  site_code: PANC
+  latitude: 61.1743
+  longitude: -149.9982
+  distance_method: haversine
+  radius_miles_inclusive: 1.0
+
+filters:
+  altitude_min_ft_inclusive: 100
+  altitude_max_ft_exclusive: 1000
+  ground_speed_min_kt_inclusive: 30
+
+time:
+  source_snapshot_interval_s: 300
+  primary_event_time_field: aircraft_event_time_utc
+  audit_time_field: snapshot_time_utc
+  timezone: UTC
+  stale_event_threshold_s: 30
+
+identity:
+  flight_track_id_field: fr24_id
+  aircraft_key_priority:
+    - hex
+    - callsign
+    - fr24_id
+
+deduplication:
+  group_fields:
+    - aircraft_key
+    - snapshot_time_utc
+  preferred_record:
+    - source_priority
+    - smallest_absolute_event_lag
+    - deterministic_record_order
+  source_priority:
+    ADSB: 1
+    UAT: 2
+    MLAT: 3
+  default_source_priority: 99
+
+outputs:
+  point_event_table: candidate_point_events_v1.csv
+  rejected_records: point_event_v1_rejections.csv
+  build_summary: point_event_v1_build_summary.json
+  data_dictionary: point_event_v1_data_dictionary.csv
+  checksums: SHA256SUMS.txt
+
+labels:
+  candidate_event_flag: 1
+  anomaly_label_applied_during_selection: false
+
+secondary_context:
+  episode_gap_threshold_s: 450
+  collapse_events_into_episode_rows: false
+
+regression_expectations:
+  strict: true
+  source_year: 2025
+  daily_files: 365
+  snapshots: 105120
+  raw_aircraft_observations: 30107
+  qualifying_before_deduplication: 12186
+  qualifying_after_deduplication: 12185

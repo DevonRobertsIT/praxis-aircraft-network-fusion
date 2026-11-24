@@ -1,0 +1,86 @@
+{
+  "design": "cross_regime_s2_train_s1_attack_test, regime target, 5 seeds",
+  "aggregates": {
+    "auprc_transformer": {
+      "mean": 0.9999228765050233,
+      "min": 0.9998760875140251,
+      "max": 0.999990313332868,
+      "sd": 4.506998704259989e-05
+    },
+    "auprc_rgcn_full": {
+      "mean": 0.954248528151892,
+      "min": 0.9457070291473499,
+      "max": 0.9627998891829603,
+      "sd": 0.006722020596389845
+    },
+    "auprc_rgcn_ablation": {
+      "mean": 0.9567270531646102,
+      "min": 0.933399321787746,
+      "max": 0.9686034219220134,
+      "sd": 0.014022906324491394
+    },
+    "auprc_cyber_rf": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "sd": 0.0
+    },
+    "auprc_fused_rf": {
+      "mean": 1.0,
+      "min": 1.0,
+      "max": 1.0,
+      "sd": 0.0
+    },
+    "H2_rgcn_minus_transformer": {
+      "mean": -0.04567434835313118,
+      "min": -0.0542046379963409,
+      "max": -0.03707619833106479,
+      "sd": 0.006740120094849646
+    },
+    "H3_full_minus_ablation": {
+      "mean": -0.002478525012718169,
+      "min": -0.020041521256686456,
+      "max": 0.01651346180524549,
+      "sd": 0.013477171581541577
+    },
+    "rgcn_minus_cyber_rf": {
+      "mean": -0.045751471848107995,
+      "min": -0.05429297085265006,
+      "max": -0.03720011081703967,
+      "sd": 0.006722020596389845
+    },
+    "rgcn_minus_fused_rf": {
+      "mean": -0.045751471848107995,
+      "min": -0.05429297085265006,
+      "max": -0.03720011081703967,
+      "sd": 0.006722020596389845
+    },
+    "transformer_minus_cyber_rf": {
+      "mean": -7.712349497681625e-05,
+      "min": -0.00012391248597487525,
+      "max": -9.686667131969529e-06,
+      "sd": 4.506998704259989e-05
+    },
+    "transformer_minus_fused_rf": {
+      "mean": -7.712349497681625e-05,
+      "min": -0.00012391248597487525,
+      "max": -9.686667131969529e-06,
+      "sd": 4.506998704259989e-05
+    }
+  },
+  "H2": {
+    "rule": "seed-mean R-GCN - Transformer >= 0.03 and all bin-cluster CIs > 0",
+    "seed_mean": -0.04567434835313118,
+    "seeds_ci_excluding_zero": 0,
+    "supported": false
+  },
+  "H3": {
+    "rule": "seed-mean full - ablation >= 0.05, all bin-cluster CIs > 0, p95 <= 500.0 ms",
+    "seed_mean": -0.002478525012718169,
+    "seeds_ci_excluding_zero": 1,
+    "max_p95_ms": 3.482395038008689,
+    "supported": false
+  },
+  "independent_240s_bins": 49,
+  "bootstrap_repeats": 1000
+}

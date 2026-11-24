@@ -1,0 +1,98 @@
+model,explanation_scope,evidence_type,evidence_name,importance_value,rank,interpretation
+Temporal Transformer,global,transformed_feature,numeric__nf3_dst_ip_unique_count,0.1669677867612335,1,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_src_ip_unique_count,0.1572869979718234,2,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_flow_duration_std_s,0.0678208967729006,3,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_iat_src_to_dst_iat_min_mean,0.0570016942801885,4,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_iat_src_to_dst_iat_max_std,0.0513538418745156,5,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_iat_src_to_dst_iat_avg_mean,0.0497127580747474,6,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_packet_total_mean,0.0404552023683209,7,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_iat_dst_to_src_iat_avg_std,0.0370431503979489,8,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__distance_miles_deviation_from_prior_mean,0.0345699774625245,9,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_byte_total_sum,0.0326980967656709,10,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_mean_overlap_duration_s,0.0316292302959482,11,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__altitude_ft_deviation_from_prior_mean,0.0310711069760145,12,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__distance_miles,0.0302330812264699,13,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_iat_src_to_dst_iat_avg_std,0.0292500608193222,14,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_iat_dst_to_src_iat_avg_mean,0.0280134930071653,15,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_iat_dst_to_src_iat_stddev_std,0.0253080736511037,16,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_flow_duration_mean_s,0.0249455676894285,17,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__ground_speed_kt_deviation_from_prior_mean,0.0242982829950051,18,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,categorical__source_type_ADSB,0.0234064768155803,19,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__altitude_ft,0.0230529063774156,20,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_dst_port_unique_count,0.0218640245948336,21,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_iat_dst_to_src_iat_max_std,0.0208954011104651,22,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_iat_src_to_dst_iat_min_std,0.0203958598649478,23,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_flow_duration_max_s,0.0193534260761225,24,mean absolute gradient-times-input across sampled test sequences
+Temporal Transformer,global,transformed_feature,numeric__nf3_iat_src_to_dst_iat_max_mean,0.0191597740194993,25,mean absolute gradient-times-input across sampled test sequences
+R-GCN,global,event_transformed_feature,numeric__nf3_dst_ip_unique_count,0.09275111,1,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_src_ip_unique_count,0.08880255,2,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_flow_duration_std_s,0.04544823,3,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_iat_src_to_dst_iat_min_mean,0.042730033,4,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_iat_src_to_dst_iat_max_std,0.030852463,5,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_mean_overlap_duration_s,0.027625421,6,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_iat_src_to_dst_iat_avg_mean,0.022658639,7,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__distance_miles_deviation_from_prior_mean,0.021500658,8,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_byte_total_sum,0.021167511,9,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_iat_dst_to_src_iat_avg_std,0.02091976,10,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_packet_total_mean,0.020444777,11,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__distance_miles,0.020149596,12,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_iat_dst_to_src_iat_max_mean,0.01991582,13,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__altitude_ft_deviation_from_prior_mean,0.019069225,14,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_iat_src_to_dst_iat_max_mean,0.01753573,15,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_packet_total_sum,0.01681177,16,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_total_overlap_duration_s,0.01652701,17,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__altitude_ft,0.016378207,18,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_iat_src_to_dst_iat_avg_std,0.01634873,19,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_dst_port_unique_count,0.016070306,20,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_iat_dst_to_src_iat_stddev_std,0.015790425,21,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_flow_duration_median_s,0.015654387,22,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_byte_total_mean,0.01505901,23,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__ground_speed_kt_deviation_from_prior_mean,0.013874082,24,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,event_transformed_feature,numeric__nf3_flow_duration_mean_s,0.0136880595,25,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,numeric__dst_port,0.005563229,1,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,numeric__src_port,0.003700096,2,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_6,0.002741786,3,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,numeric__flow_duration_s,0.0016001274,4,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_17,0.0009982992,5,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_89,8.264013e-06,6,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_172,7.302576e-08,7,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_171,3.0322635e-08,8,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_1,3.5265337e-09,9,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_111,0.0,10,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_132,0.0,11,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_152,0.0,12,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_187,0.0,13,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_198,0.0,14,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_199,0.0,15,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_200,0.0,16,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_208,0.0,17,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_209,0.0,18,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_218,0.0,19,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_223,0.0,20,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_224,0.0,21,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_228,0.0,22,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_42,0.0,23,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_43,0.0,24,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,flow_transformed_feature,categorical__protocol_87,0.0,25,mean absolute gradient-times-input across sampled test event logits
+R-GCN,global,relation_weight_norm,episode_previous_event,4.875319957733154,1,mean learned relation-transform Frobenius norm; diagnostic only
+R-GCN,global,relation_weight_norm,flow_post_event_to_event,4.7360453605651855,2,mean learned relation-transform Frobenius norm; diagnostic only
+R-GCN,global,relation_weight_norm,flow_pre_event_to_event,4.70650577545166,3,mean learned relation-transform Frobenius norm; diagnostic only
+R-GCN,global,relation_weight_norm,flow_overlaps_event_to_event,4.645554065704346,4,mean learned relation-transform Frobenius norm; diagnostic only
+R-GCN,global,relation_weight_norm,aircraft_previous_event,4.4134814739227295,5,mean learned relation-transform Frobenius norm; diagnostic only
+R-GCN,global,relation_weight_norm,site_previous_event,4.314320087432861,6,mean learned relation-transform Frobenius norm; diagnostic only
+Temporal Transformer,global,temporal_attention_position,25_steps_before_current,0.08740751562800135,1,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,31_steps_before_current,0.07640163729593036,2,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,22_steps_before_current,0.0696659029508737,3,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,2_steps_before_current,0.06504665973989175,4,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,0_steps_before_current,0.053475979661016,5,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,21_steps_before_current,0.051038973319918995,6,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,18_steps_before_current,0.035520498772711996,7,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,26_steps_before_current,0.03434005897452145,8,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,5_steps_before_current,0.0341325626832258,9,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,19_steps_before_current,0.03345194113717295,10,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,6_steps_before_current,0.0314715291606262,11,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,15_steps_before_current,0.0297151133236184,12,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,7_steps_before_current,0.028986122918468,13,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,13_steps_before_current,0.0269792771869106,14,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,11_steps_before_current,0.0263709138544072,15,mean final-layer final-token attention across target classes; not causal proof
+Temporal Transformer,global,temporal_attention_position,28_steps_before_current,0.0262011765998977,16,mean final-layer final-token attention across target classes; not causal proof

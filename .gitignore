@@ -1,0 +1,31 @@
+# Python environment, caches and notebook checkpoints
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# Operating-system files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Raw and processed data in the notebook folder (Flightradar24 and NF-UNSW-NB15-v3)
+Project/*/data/
+
+# Tables with aircraft identifiers or positions, in any package
+candidate_point_events_v*_with_context_and_nf3_primary.csv
+event_source_block_mapping_v*.csv
+model_split_assignments_v4.csv
+baseline_test_predictions_v4.csv
+temporal_transformer_predictions_v2.csv
+*case_studies_v2.csv
+analyst_cards/
+
+# Flow-level NF-UNSW-NB15-v3 extracts (regenerated on a rerun)
+event_flow_edges_primary_bounded_v*.csv
+nf3_flow_labels_used_v*.csv.gz
+selected_event_flow_edges_v2.csv
+
+# Notebook-folder files that Appendix A does not cite
+Project/*/build_incidents_*.py
+Project/*/json_raw.py
+Project/*/Flightradar24-API.yaml

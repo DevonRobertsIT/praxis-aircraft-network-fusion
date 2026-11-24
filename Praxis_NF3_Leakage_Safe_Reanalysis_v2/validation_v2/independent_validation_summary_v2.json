@@ -1,0 +1,8 @@
+{
+  "validation_version": "nf3_leakage_safe_reanalysis_validation_v2",
+  "checks": 34,
+  "passed": 34,
+  "failed": 0,
+  "overall_decision": "PASS",
+  "failed_checks": []
+}

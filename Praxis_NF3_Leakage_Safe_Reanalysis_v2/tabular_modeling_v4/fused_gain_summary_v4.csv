@@ -1,0 +1,5 @@
+model_version,split_strategy,model,fused_test_auprc,best_unimodal_feature_set,best_unimodal_test_auprc,fused_minus_best_unimodal_auprc
+point_event_tabular_baselines_leakage_safe_v4,chronological_primary,decision_tree,1.0,cyber,1.0,0.0
+point_event_tabular_baselines_leakage_safe_v4,chronological_primary,dummy_prior,0.49945295404814005,cyber,0.49945295404814005,0.0
+point_event_tabular_baselines_leakage_safe_v4,chronological_primary,logistic_regression,1.0,cyber,1.0,0.0
+point_event_tabular_baselines_leakage_safe_v4,chronological_primary,random_forest,1.0,cyber,1.0,0.0

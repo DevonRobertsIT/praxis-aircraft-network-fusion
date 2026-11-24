@@ -1,0 +1,5 @@
+# Notebooks 05, 06 (v3.3) and 09 (v3.3) run headless via code/run_notebook_code.py.
+# Model runs were executed on Windows 11 with Python 3.13.2 and torch 2.8.0+cpu.
+-r requirements-analysis.txt
+torch==2.8.0       # CPU build: pip install torch==2.8.0 --index-url https://download.pytorch.org/whl/cpu
+ipython>=8         # the notebooks import IPython.display

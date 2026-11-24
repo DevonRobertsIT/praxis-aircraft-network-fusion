@@ -1,0 +1,5 @@
+model_key,point_test_auprc,bootstrap_mean_auprc,bootstrap_ci_lower_95,bootstrap_ci_upper_95,bootstrap_iterations,model_label
+tabular_fused_best,1.0,1.0,1.0,1.0,2000,Fused tabular — decision_tree
+temporal_transformer_fused,0.9999964010149138,0.9999963806198748,0.9999820404752872,1.0,2000,Temporal Transformer — fused
+rgcn_full_lag_relation,0.9179189221965568,0.9180632852449765,0.9063643118396635,0.929249880885759,2000,R-GCN — full lag/relation
+rgcn_lag_relation_ablation,0.9060419491803176,0.9061701113473111,0.8929400979739852,0.9183939365437952,2000,R-GCN — lag/relation ablation

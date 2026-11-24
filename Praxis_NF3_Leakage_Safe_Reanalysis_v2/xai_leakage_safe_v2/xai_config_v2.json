@@ -1,0 +1,16 @@
+{
+  "model_version": "xai_validation_v2",
+  "random_state": 42,
+  "device": "cpu",
+  "fast_mode": false,
+  "top_k": 10,
+  "fidelity_random_repeats": 5,
+  "stability_repeats": 3,
+  "noise_std": 0.01,
+  "transformer_fidelity_sample_max": 128,
+  "transformer_stability_sample_max": 96,
+  "rgcn_attribution_sample_max": 96,
+  "case_study_count": 5,
+  "latency_sample_max": 10,
+  "local_hops": 2
+}

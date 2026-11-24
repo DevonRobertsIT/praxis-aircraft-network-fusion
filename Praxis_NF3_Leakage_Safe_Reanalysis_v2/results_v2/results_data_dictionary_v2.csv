@@ -1,0 +1,16 @@
+artifact,artifact_role
+rq1_timestamp_alignment_mae_v2.csv,"Event-time and processing-time timestamp MAE, descriptive errors, and H1 point decision."
+rq1_timestamp_alignment_bootstrap_v2.csv,Bootstrap uncertainty for the H1 MAE reduction.
+alignment_window_sensitivity_v2.csv,Flow coverage and target stability across Notebook 03 temporal windows.
+model_comparison_v2.csv,"Unified validation/test metrics and latency for the selected tabular, Transformer, and R-GCN models."
+paired_test_prediction_bank_v2.csv,Standardized predictions on common held-out events for paired comparisons.
+model_auprc_bootstrap_v2.csv,Paired stratified-bootstrap AUPRC intervals for each selected model.
+paired_model_auprc_differences_v2.csv,"Paired AUPRC differences, confidence intervals, and margin probabilities."
+subgroup_performance_v2.csv,Frozen-threshold descriptive subgroup metrics when sample and class requirements are met.
+explainability_summary_v2.csv,Within-method Transformer and R-GCN explanation rankings.
+consolidated_hypothesis_evaluation_v2.csv,"Consolidated H1–H3 criteria, observed values, uncertainty, latency, and support decisions."
+results_integrity_checks_v2.csv,Structural checks applied before results consolidation.
+results_reference_v2.json,Machine-readable frozen Notebook 07 results reference.
+results_narrative_v2.md,Automatically generated dissertation-ready results narrative with interpretation caveats.
+results_config_v2.json,Frozen Notebook 07 analysis configuration.
+results_build_summary_v2.json,"Provenance, environment, counts, checks, and output inventory."

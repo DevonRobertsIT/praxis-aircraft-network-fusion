@@ -1,0 +1,33 @@
+{
+  "analysis_version": "any_flow_and_matched_controls_v2",
+  "bootstrap_iterations": 5000,
+  "match_design": "coarsened_exact_matching",
+  "candidate_quantile_bins_per_variable": [
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "primary_design_selection_rule": "maximum matched pairs subject to both absolute SMDs <= 0.10",
+  "balance_threshold": 0.1,
+  "matching_variables": [
+    "nf3_flow_count",
+    "nf3_flow_duration_sum_s"
+  ],
+  "versions_evaluated": [
+    "frozen_v1",
+    "leakage_safe_v2"
+  ],
+  "outputs": [
+    "ANY_FLOW_AND_MATCHED_EVALUATION_REPORT.md",
+    "SHA256SUMS.txt",
+    "any_flow_baseline_evaluation.csv",
+    "control_evaluation_summary.json",
+    "matched_flow_covered_balance_diagnostics.csv",
+    "matched_flow_covered_coarsening_sensitivity.csv",
+    "matched_flow_covered_event_pairs.csv",
+    "matched_flow_covered_model_evaluation.csv",
+    "random_forest_paired_bootstrap_differences.csv"
+  ]
+}

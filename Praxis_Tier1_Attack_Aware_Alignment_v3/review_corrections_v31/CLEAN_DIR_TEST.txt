@@ -1,0 +1,4 @@
+Clean-directory reproduction of 40_review_corrections_v31.py from the exported predictions (23 Sep 2026)
+h1prime_paired_jitter_loss_aggregate_v31.csv: same_shape=True, max_abs_numeric_diff=0.0
+h5_fusion_vs_best_unimodal_v31.csv: same_shape=True, max_abs_numeric_diff=0.0
+h1prime_label_freeze_audit_v31.csv: same_shape=True, max_abs_numeric_diff=0.0

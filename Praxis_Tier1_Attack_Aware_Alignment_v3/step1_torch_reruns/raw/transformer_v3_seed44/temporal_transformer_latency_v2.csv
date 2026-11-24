@@ -1,0 +1,2 @@
+model_version,feature_set,measurement_type,latency_events,latency_mean_ms,latency_p50_ms,latency_p95_ms
+temporal_transformer_leakage_safe_v2,fused,raw_sequence_preprocessing_plus_model_forward,100,7.037781999679282,7.048100000247359,7.738935007364489

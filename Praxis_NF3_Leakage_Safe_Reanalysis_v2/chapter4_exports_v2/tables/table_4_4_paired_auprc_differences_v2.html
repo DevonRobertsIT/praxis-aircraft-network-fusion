@@ -1,0 +1,42 @@
+<table class="dataframe">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Comparison</th>
+      <th>AUPRC difference</th>
+      <th>95% CI</th>
+      <th>Required margin</th>
+      <th>P(difference &gt; 0)</th>
+      <th>P(meets required margin)</th>
+      <th>Point-margin result</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>H2: full R-GCN minus temporal Transformer</td>
+      <td>-0.0821</td>
+      <td>[-0.0936, -0.0707]</td>
+      <td>0.0300</td>
+      <td>0.0%</td>
+      <td>0.0%</td>
+      <td>Fail</td>
+    </tr>
+    <tr>
+      <td>H3: full R-GCN minus lag/relation ablation</td>
+      <td>+0.0119</td>
+      <td>[+0.0061, +0.0176]</td>
+      <td>0.0500</td>
+      <td>100.0%</td>
+      <td>0.0%</td>
+      <td>Fail</td>
+    </tr>
+    <tr>
+      <td>Temporal Transformer minus strongest fused tabular baseline</td>
+      <td>-0.0000</td>
+      <td>[-0.0000, 0.0000]</td>
+      <td>0.0000</td>
+      <td>1.2%</td>
+      <td>34.8%</td>
+      <td>Fail</td>
+    </tr>
+  </tbody>
+</table>

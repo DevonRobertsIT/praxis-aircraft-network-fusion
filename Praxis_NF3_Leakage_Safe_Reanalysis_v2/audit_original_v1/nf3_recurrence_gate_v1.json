@@ -1,0 +1,12 @@
+{
+  "audit_version": "nf3_source_recurrence_audit_v1",
+  "frozen_alignment_version": "point_event_nf3_alignment_v1",
+  "frozen_model_split_version": "point_event_tabular_baselines_v3",
+  "full_primary_edge_rows_audited": 2974178,
+  "nf3_source_flow_rows": 2365424,
+  "source_flows_reused_across_two_or_more_splits": 478226,
+  "primary_source_window_overlap_detected": true,
+  "leakage_safe_independence_gate": "FAIL",
+  "rerun_required": true,
+  "decision_rule": "FAIL when any original NF3 source flow is reused across frozen chronological splits or when the mapped primary source-time window unions overlap across splits."
+}

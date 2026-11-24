@@ -1,0 +1,438 @@
+{
+  "definitions": {
+    "model_version": "point_event_tabular_baselines_leakage_safe_v4",
+    "preferred_raw_target": "cyber_attack_window_label",
+    "actual_model_target": "model_target",
+    "target_definition": {
+      "mode": "raw_any_attack_window_label",
+      "model_target_column": "model_target",
+      "source_column": "cyber_attack_window_label",
+      "operator": "identity",
+      "threshold": null,
+      "training_positive_fraction": 0.6046429827646852,
+      "full_positive_fraction": 0.5745588838736151,
+      "reason": "The raw Notebook 03 target contained both classes overall and in chronological training."
+    },
+    "primary_window": "primary_120s",
+    "feature_sets": [
+      "physical",
+      "cyber",
+      "fused"
+    ],
+    "models": [
+      "dummy_prior",
+      "logistic_regression",
+      "decision_tree",
+      "random_forest"
+    ],
+    "chronological_split_fractions": {
+      "train": 0.7,
+      "validation": 0.15,
+      "test": 0.15
+    },
+    "grouped_sensitivity_requested": true,
+    "grouped_sensitivity_available": true,
+    "grouped_split_seed_used": 42,
+    "calendar_features_included": false
+  },
+  "interpretation": {
+    "site_coincident_claim": false,
+    "causal_claim": false,
+    "statement": "Results quantify predictive performance within the Notebook 03 alignment design. Controlled replay results must not be interpreted as real simultaneous PANC aircraft/cyber observations."
+  },
+  "inputs": {
+    "feature_file": "data/processed/point_event_v2/nf3_alignment_v2/candidate_point_events_v2_with_context_and_nf3_primary.csv",
+    "target_file": "data/processed/point_event_v2/nf3_alignment_v2/event_nf3_targets_v2.csv",
+    "event_rows": 12185,
+    "unique_aircraft_keys": 2035,
+    "raw_positive_targets": 7001,
+    "model_positive_targets": 7001,
+    "model_target_prevalence": 0.5745588838736151,
+    "event_time_start_utc": "2025-01-01T02:24:59+00:00",
+    "event_time_end_utc": "2025-12-31T20:19:58+00:00",
+    "input_sha256": {
+      "feature_file": "a936fa22142607802aa8a5c2141ae4adaa3292eac6bcbe5dc4b51c9e39819f15",
+      "target_file": "32604331047385632bccd37e980b8f205879dcc9ce9e324dee34c7f7260544f7"
+    }
+  },
+  "features": {
+    "physical": {
+      "numeric_candidates": [
+        "event_lag_seconds",
+        "stale_event_flag",
+        "latitude",
+        "longitude",
+        "distance_miles",
+        "altitude_ft",
+        "ground_speed_kt",
+        "vertical_speed_fpm",
+        "track_degrees",
+        "missing_hex_flag",
+        "missing_callsign_flag",
+        "gap_from_previous_same_aircraft_s",
+        "episode_sequence_number",
+        "episode_size",
+        "episode_max_internal_gap_s",
+        "episode_gap_threshold_s",
+        "episode_position",
+        "multi_observation_episode_flag",
+        "duration_observable_flag",
+        "observed_duration_s",
+        "prior_event_count",
+        "events_previous_1h",
+        "events_previous_24h",
+        "events_previous_7d",
+        "events_previous_30d",
+        "time_since_previous_event_s",
+        "prior_mean_altitude_ft",
+        "altitude_ft_deviation_from_prior_mean",
+        "prior_mean_ground_speed_kt",
+        "ground_speed_kt_deviation_from_prior_mean",
+        "prior_mean_distance_miles",
+        "distance_miles_deviation_from_prior_mean",
+        "prior_mean_vertical_speed_fpm",
+        "vertical_speed_fpm_deviation_from_prior_mean",
+        "recurrence_1h_flag",
+        "recurrence_24h_flag",
+        "recurrence_7d_flag",
+        "recurrence_30d_flag",
+        "first_observed_aircraft_event_flag",
+        "site_events_previous_1h",
+        "site_events_previous_24h",
+        "site_events_previous_7d",
+        "track_sin",
+        "track_cos"
+      ],
+      "categorical_candidates": [
+        "source_type",
+        "aircraft_key_source",
+        "deduplication_status"
+      ]
+    },
+    "cyber": {
+      "numeric_candidates": [
+        "nf3_flow_count",
+        "nf3_flow_duration_sum_s",
+        "nf3_flow_duration_mean_s",
+        "nf3_flow_duration_median_s",
+        "nf3_flow_duration_std_s",
+        "nf3_flow_duration_max_s",
+        "nf3_packet_total_sum",
+        "nf3_packet_total_mean",
+        "nf3_packet_total_max",
+        "nf3_byte_total_sum",
+        "nf3_byte_total_mean",
+        "nf3_byte_total_max",
+        "nf3_protocol_unique_count",
+        "nf3_src_ip_unique_count",
+        "nf3_dst_ip_unique_count",
+        "nf3_src_port_unique_count",
+        "nf3_dst_port_unique_count",
+        "nf3_pre_event_flow_count",
+        "nf3_at_event_flow_count",
+        "nf3_post_event_flow_count",
+        "nf3_nearest_flow_start_lag_s",
+        "nf3_first_flow_start_lag_s",
+        "nf3_last_flow_start_lag_s",
+        "nf3_total_overlap_duration_s",
+        "nf3_mean_overlap_duration_s",
+        "nf3_max_overlap_duration_s",
+        "nf3_iat_src_to_dst_iat_min_mean",
+        "nf3_iat_src_to_dst_iat_min_std",
+        "nf3_iat_src_to_dst_iat_max_mean",
+        "nf3_iat_src_to_dst_iat_max_std",
+        "nf3_iat_src_to_dst_iat_avg_mean",
+        "nf3_iat_src_to_dst_iat_avg_std",
+        "nf3_iat_src_to_dst_iat_stddev_mean",
+        "nf3_iat_src_to_dst_iat_stddev_std",
+        "nf3_iat_dst_to_src_iat_min_mean",
+        "nf3_iat_dst_to_src_iat_min_std",
+        "nf3_iat_dst_to_src_iat_max_mean",
+        "nf3_iat_dst_to_src_iat_max_std",
+        "nf3_iat_dst_to_src_iat_avg_mean",
+        "nf3_iat_dst_to_src_iat_avg_std",
+        "nf3_iat_dst_to_src_iat_stddev_mean",
+        "nf3_iat_dst_to_src_iat_stddev_std",
+        "window_boundary_truncated_flag"
+      ],
+      "categorical_candidates": []
+    },
+    "fused": {
+      "numeric_candidates": [
+        "event_lag_seconds",
+        "stale_event_flag",
+        "latitude",
+        "longitude",
+        "distance_miles",
+        "altitude_ft",
+        "ground_speed_kt",
+        "vertical_speed_fpm",
+        "track_degrees",
+        "missing_hex_flag",
+        "missing_callsign_flag",
+        "gap_from_previous_same_aircraft_s",
+        "episode_sequence_number",
+        "episode_size",
+        "episode_max_internal_gap_s",
+        "episode_gap_threshold_s",
+        "episode_position",
+        "multi_observation_episode_flag",
+        "duration_observable_flag",
+        "observed_duration_s",
+        "prior_event_count",
+        "events_previous_1h",
+        "events_previous_24h",
+        "events_previous_7d",
+        "events_previous_30d",
+        "time_since_previous_event_s",
+        "prior_mean_altitude_ft",
+        "altitude_ft_deviation_from_prior_mean",
+        "prior_mean_ground_speed_kt",
+        "ground_speed_kt_deviation_from_prior_mean",
+        "prior_mean_distance_miles",
+        "distance_miles_deviation_from_prior_mean",
+        "prior_mean_vertical_speed_fpm",
+        "vertical_speed_fpm_deviation_from_prior_mean",
+        "recurrence_1h_flag",
+        "recurrence_24h_flag",
+        "recurrence_7d_flag",
+        "recurrence_30d_flag",
+        "first_observed_aircraft_event_flag",
+        "site_events_previous_1h",
+        "site_events_previous_24h",
+        "site_events_previous_7d",
+        "track_sin",
+        "track_cos",
+        "nf3_flow_count",
+        "nf3_flow_duration_sum_s",
+        "nf3_flow_duration_mean_s",
+        "nf3_flow_duration_median_s",
+        "nf3_flow_duration_std_s",
+        "nf3_flow_duration_max_s",
+        "nf3_packet_total_sum",
+        "nf3_packet_total_mean",
+        "nf3_packet_total_max",
+        "nf3_byte_total_sum",
+        "nf3_byte_total_mean",
+        "nf3_byte_total_max",
+        "nf3_protocol_unique_count",
+        "nf3_src_ip_unique_count",
+        "nf3_dst_ip_unique_count",
+        "nf3_src_port_unique_count",
+        "nf3_dst_port_unique_count",
+        "nf3_pre_event_flow_count",
+        "nf3_at_event_flow_count",
+        "nf3_post_event_flow_count",
+        "nf3_nearest_flow_start_lag_s",
+        "nf3_first_flow_start_lag_s",
+        "nf3_last_flow_start_lag_s",
+        "nf3_total_overlap_duration_s",
+        "nf3_mean_overlap_duration_s",
+        "nf3_max_overlap_duration_s",
+        "nf3_iat_src_to_dst_iat_min_mean",
+        "nf3_iat_src_to_dst_iat_min_std",
+        "nf3_iat_src_to_dst_iat_max_mean",
+        "nf3_iat_src_to_dst_iat_max_std",
+        "nf3_iat_src_to_dst_iat_avg_mean",
+        "nf3_iat_src_to_dst_iat_avg_std",
+        "nf3_iat_src_to_dst_iat_stddev_mean",
+        "nf3_iat_src_to_dst_iat_stddev_std",
+        "nf3_iat_dst_to_src_iat_min_mean",
+        "nf3_iat_dst_to_src_iat_min_std",
+        "nf3_iat_dst_to_src_iat_max_mean",
+        "nf3_iat_dst_to_src_iat_max_std",
+        "nf3_iat_dst_to_src_iat_avg_mean",
+        "nf3_iat_dst_to_src_iat_avg_std",
+        "nf3_iat_dst_to_src_iat_stddev_mean",
+        "nf3_iat_dst_to_src_iat_stddev_std",
+        "window_boundary_truncated_flag"
+      ],
+      "categorical_candidates": [
+        "source_type",
+        "aircraft_key_source",
+        "deduplication_status"
+      ]
+    }
+  },
+  "splits": [
+    {
+      "split_strategy": "chronological_split",
+      "split": "train",
+      "rows": 8529,
+      "aircraft_keys": 1717,
+      "positive_targets": 5157,
+      "both_classes_present": 1,
+      "target_prevalence": 0.6046429828,
+      "start_time_utc": "2025-01-01T02:24:59.000Z",
+      "end_time_utc": "2025-09-15T23:34:58.000Z"
+    },
+    {
+      "split_strategy": "chronological_split",
+      "split": "validation",
+      "rows": 1828,
+      "aircraft_keys": 688,
+      "positive_targets": 931,
+      "both_classes_present": 1,
+      "target_prevalence": 0.5092997812,
+      "start_time_utc": "2025-09-15T23:49:59.000Z",
+      "end_time_utc": "2025-11-04T19:59:59.000Z"
+    },
+    {
+      "split_strategy": "chronological_split",
+      "split": "test",
+      "rows": 1828,
+      "aircraft_keys": 700,
+      "positive_targets": 913,
+      "both_classes_present": 1,
+      "target_prevalence": 0.499452954,
+      "start_time_utc": "2025-11-04T20:39:59.000Z",
+      "end_time_utc": "2025-12-31T20:19:58.000Z"
+    },
+    {
+      "split_strategy": "aircraft_group_split",
+      "split": "train",
+      "rows": 9175,
+      "aircraft_keys": 1424,
+      "positive_targets": 5283,
+      "both_classes_present": 1,
+      "target_prevalence": 0.5758038147,
+      "start_time_utc": "2025-01-01T02:24:59.000Z",
+      "end_time_utc": "2025-12-31T20:19:58.000Z"
+    },
+    {
+      "split_strategy": "aircraft_group_split",
+      "split": "validation",
+      "rows": 1588,
+      "aircraft_keys": 305,
+      "positive_targets": 904,
+      "both_classes_present": 1,
+      "target_prevalence": 0.5692695214,
+      "start_time_utc": "2025-01-03T03:39:58.000Z",
+      "end_time_utc": "2025-12-31T13:34:59.000Z"
+    },
+    {
+      "split_strategy": "aircraft_group_split",
+      "split": "test",
+      "rows": 1422,
+      "aircraft_keys": 306,
+      "positive_targets": 814,
+      "both_classes_present": 1,
+      "target_prevalence": 0.5724331927,
+      "start_time_utc": "2025-01-02T23:09:59.000Z",
+      "end_time_utc": "2025-12-30T21:34:59.000Z"
+    }
+  ],
+  "outputs": {
+    "model_runs": 14,
+    "test_prediction_rows": 24780,
+    "saved_model_files": 14,
+    "saved_figure_files": 21,
+    "chronological_fused_latency": [
+      {
+        "model": "decision_tree",
+        "latency_p95_ms": 2.90377185,
+        "p95_under_500ms": true
+      },
+      {
+        "model": "dummy_prior",
+        "latency_p95_ms": 2.95103465,
+        "p95_under_500ms": true
+      },
+      {
+        "model": "logistic_regression",
+        "latency_p95_ms": 3.017179349999999,
+        "p95_under_500ms": true
+      },
+      {
+        "model": "random_forest",
+        "latency_p95_ms": 37.272885200000005,
+        "p95_under_500ms": true
+      }
+    ],
+    "chronological_fused_gain": [
+      {
+        "model_version": "point_event_tabular_baselines_leakage_safe_v4",
+        "split_strategy": "chronological_primary",
+        "model": "decision_tree",
+        "fused_test_auprc": 1.0,
+        "best_unimodal_feature_set": "cyber",
+        "best_unimodal_test_auprc": 1.0,
+        "fused_minus_best_unimodal_auprc": 0.0
+      },
+      {
+        "model_version": "point_event_tabular_baselines_leakage_safe_v4",
+        "split_strategy": "chronological_primary",
+        "model": "dummy_prior",
+        "fused_test_auprc": 0.49945295404814005,
+        "best_unimodal_feature_set": "cyber",
+        "best_unimodal_test_auprc": 0.49945295404814005,
+        "fused_minus_best_unimodal_auprc": 0.0
+      },
+      {
+        "model_version": "point_event_tabular_baselines_leakage_safe_v4",
+        "split_strategy": "chronological_primary",
+        "model": "logistic_regression",
+        "fused_test_auprc": 1.0,
+        "best_unimodal_feature_set": "cyber",
+        "best_unimodal_test_auprc": 1.0,
+        "fused_minus_best_unimodal_auprc": 0.0
+      },
+      {
+        "model_version": "point_event_tabular_baselines_leakage_safe_v4",
+        "split_strategy": "chronological_primary",
+        "model": "random_forest",
+        "fused_test_auprc": 1.0,
+        "best_unimodal_feature_set": "cyber",
+        "best_unimodal_test_auprc": 1.0,
+        "fused_minus_best_unimodal_auprc": 0.0
+      }
+    ]
+  },
+  "environment": {
+    "created_utc": "2026-09-03T21:26:29.618601+00:00",
+    "python": "3.12.13 (main, Aug  7 2026, 02:25:39) [Clang 22.1.3 ]",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scikit_learn": "1.8.0",
+    "joblib": "1.5.3"
+  },
+  "regression_checks": [
+    {
+      "metric": "input_event_rows_preserved_in_split_assignments",
+      "expected": 12185,
+      "actual": 12185,
+      "match": true
+    },
+    {
+      "metric": "chronological_training_has_both_classes",
+      "expected": true,
+      "actual": true,
+      "match": true
+    },
+    {
+      "metric": "chronological_model_runs",
+      "expected": 12,
+      "actual": 12,
+      "match": true
+    },
+    {
+      "metric": "prediction_rows",
+      "expected": 24780,
+      "actual": 24780,
+      "match": true
+    },
+    {
+      "metric": "target_leakage_columns_in_predictors",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    },
+    {
+      "metric": "identifier_columns_in_predictors",
+      "expected": 0,
+      "actual": 0,
+      "match": true
+    }
+  ]
+}

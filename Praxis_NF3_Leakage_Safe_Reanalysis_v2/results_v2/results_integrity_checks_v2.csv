@@ -1,0 +1,7 @@
+check,expected,actual,match,severity
+fused_event_id_unique,True,True,True,error
+split_event_id_unique,True,True,True,error
+fused_rows_equal_split_rows,12185,12185,True,error
+fused_and_split_event_sets_equal,True,True,True,error
+chronological_split_values_valid,"{'validation', 'test', 'train'}","['test', 'train', 'validation']",True,error
+model_target_binary,"{0, 1}","[0, 1]",True,error

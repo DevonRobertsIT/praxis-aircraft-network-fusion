@@ -1,0 +1,5 @@
+model,fused_minus_cyber_auprc,event_ci_low,event_ci_high,bin_cluster_ci_low,bin_cluster_ci_high
+decision_tree,0.0,0.0,0.0,0.0,0.0
+dummy_prior,0.0,0.0,0.0,0.0,0.0
+logistic_regression,-6.63353501761943e-06,-3.317658324920591e-05,1.5874259274209484e-05,-2.6488747095018694e-05,8.602001896562677e-07
+random_forest,0.0,-1.1102230246251565e-16,1.1102230246251565e-16,-1.1102230246251565e-16,1.1102230246251565e-16

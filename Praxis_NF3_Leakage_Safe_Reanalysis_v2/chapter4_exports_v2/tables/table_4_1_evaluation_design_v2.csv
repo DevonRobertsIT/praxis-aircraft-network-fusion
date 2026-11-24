@@ -1,0 +1,10 @@
+Design element,Value
+Candidate low-altitude point events,"12,185"
+Common held-out events,"1,828"
+Positive held-out events,913
+Held-out target prevalence,49.95%
+Primary temporal window,±120 seconds
+Alignment mode,point event nf3 alignment leakage safe v2
+Paired bootstrap iterations,"2,000"
+Minimum subgroup rows,25
+Interpretation boundary,Controlled cross-domain alignment performance; not evidence of causal or site-coincident aircraft/cyber incidents.

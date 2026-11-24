@@ -1,0 +1,11 @@
+{
+  "validation_version": "nf3_leakage_safe_reanalysis_validation_v2",
+  "checks": 36,
+  "passed": 34,
+  "failed": 2,
+  "overall_decision": "FAIL",
+  "failed_checks": [
+    "both_classes_within_each_session_partition",
+    "v2_test_session_indicator_not_perfect"
+  ]
+}

@@ -1,0 +1,12 @@
+artifact,artifact_role
+tables/,"Numbered Chapter 4 tables in CSV, Markdown, LaTeX, and HTML formats."
+figures/,High-resolution Chapter 4 PNG figures generated from frozen Notebook 07 outputs.
+chapter4_caption_manifest_v2.csv,"Table and figure numbering, captions, and interpretive notes."
+chapter4_integrity_checks_v2.csv,Notebook 07 checksum and structural-integrity verification results.
+chapter4_results_draft_v2.md,Automatically generated Chapter 4 results draft grounded in frozen outputs.
+chapter4_results_report_v2.html,Self-contained index page referencing all exported tables and figures.
+chapter4_reference_v2.json,Machine-readable Chapter 4 export reference.
+chapter4_config_v2.json,Frozen Notebook 08 export configuration.
+chapter4_build_summary_v2.json,"Notebook 08 provenance, environment, and output inventory."
+SHA256SUMS.txt,SHA-256 manifest for the Chapter 4 export directory.
+chapter4_exports_v2.zip,ZIP package containing the complete Chapter 4 export directory.

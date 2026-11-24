@@ -1,0 +1,4 @@
+hypothesis,research_question,criterion,observed_value,required_value,bootstrap_ci_lower_95,bootstrap_ci_upper_95,latency_value_ms,latency_limit_ms,supported
+H1,RQ1,Event-time MAE reduction versus processing time >= 1.0 second,1.3716864997948297,1.0,1.3274415264669674,1.421015592942142,,,True
+H2,RQ2,Full R-GCN test AUPRC - temporal Transformer test AUPRC >= 0.03,-0.08207747881835703,0.03,-0.09363565820163144,-0.07074655015355874,,,False
+H3,RQ3,Full R-GCN test AUPRC - lag/relation ablation test AUPRC >= 0.05 and full local p95 latency <= 500 ms,0.011876973016239245,0.05,0.006081922966147876,0.017616346827586105,2.4096937501326465,500.0,False

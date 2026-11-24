@@ -1,0 +1,25 @@
+{
+  "model_version": "temporal_transformer_leakage_safe_v2",
+  "model": "causal_temporal_transformer",
+  "feature_set": "fused",
+  "target_definition": {
+    "mode": "raw_any_attack_window_label",
+    "model_target_column": "model_target",
+    "source_column": "cyber_attack_window_label",
+    "operator": "identity",
+    "threshold": null,
+    "training_positive_fraction": 0.6046429827646852,
+    "full_positive_fraction": 0.5745588838736151,
+    "reason": "The raw Notebook 03 target contained both classes overall and in chronological training."
+  },
+  "sequence_length": 32,
+  "selected_threshold": 0.3674864172935486,
+  "validation_auprc": 0.999461740108765,
+  "test_auprc": 0.9999964010149138,
+  "test_f1": 0.9978070175438597,
+  "test_recall": 0.9967141292442497,
+  "latency_p95_ms": 12.820223349922344,
+  "hypothesis_h2_r_gcn_margin_required": 0.03,
+  "future_comparison_rule": "R-GCN test AUPRC minus this Transformer test AUPRC",
+  "interpretation": "Controlled cross-domain alignment performance; not evidence of a site-coincident or causal aircraft-cyber relationship."
+}

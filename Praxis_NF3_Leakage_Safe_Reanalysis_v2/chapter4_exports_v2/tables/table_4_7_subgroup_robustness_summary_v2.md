@@ -1,0 +1,6 @@
+| Model | Reported subgroups | Minimum subgroup AUPRC | Median subgroup AUPRC | Maximum subgroup AUPRC | Lowest subgroup | Highest subgroup |
+| --- | --- | --- | --- | --- | --- | --- |
+| R-GCN — full lag/relation | 5 | 0.9169 | 0.9179 | 0.9183 | recurrence_context: first_observed_event | recurrence_context: prior_event_present |
+| R-GCN — lag/relation ablation | 5 | 0.9057 | 0.9060 | 0.9123 | source_type: ADSB | recurrence_context: first_observed_event |
+| Fused tabular — decision_tree | 5 | 1.0000 | 1.0000 | 1.0000 | source_type: ADSB | timestamp_freshness: non_stale |
+| Temporal Transformer — fused | 5 | 1.0000 | 1.0000 | 1.0000 | recurrence_context: prior_event_present | recurrence_context: first_observed_event |
